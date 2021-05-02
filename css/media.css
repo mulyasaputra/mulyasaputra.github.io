@@ -1,0 +1,36 @@
+/* Navbar styles*/
+.tombol{
+  text-transform: uppercase;
+  border-radius: 50px !important;
+}
+
+
+
+
+/* Desktop Version*/
+@media (min-width: 992px) {
+  .navbar-nav{
+  text-transform: uppercase;
+  }
+  .nav-link:hover::after{
+  content: ' ';
+  display: block;
+  border-bottom: 3px solid #0B63DC;
+  width: 50%;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: -8px;
+}
+}
+
+/* Tablets Version*/
+@media (min-width: 768px) {
+  .navbar-nav{
+    text-align: center;
+  }
+  
+}
+/* Phone Version*/
+@media (min-width: 576px) {
+  
+}
