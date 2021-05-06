@@ -1,51 +1,64 @@
 {
-      "design": [
-        {
-            "kategori": "Web Design",
-            "nama": "Sestcly",
-            "link": "#",
-            "gambar": "img/logo1.png"
-        },
-        {
-            "kategori": "App Design",
-            "nama": "Shoping",
-            "link": "#",
-            "gambar": "img/logo2.png"
-        },
-        {
-            "kategori": "App Design",
-            "nama": "Payment",
-            "link": "#",
-            "gambar": "img/logo3.png"
-        },{
-            "kategori": "Web Design",
-            "nama": "Sestcly",
-            "link": "#",
-            "gambar": "img/logo1.png"
-        },
-        {
-            "kategori": "App Design",
-            "nama": "Shoping",
-            "link": "#",
-            "gambar": "img/logo2.png"
-        },
-        {
-            "kategori": "App Design",
-            "nama": "Payment",
-            "link": "#",
-            "gambar": "img/logo3.png"
-        },
-        {
-            "kategori": "Web Design",
-            "nama": "Sestcly",
-            "link": "#",
-            "gambar": "img/logo1.png"
-        },
-        {
-            "kategori": "App Design",
-            "nama": "Shoping",
-            "link": "#",
-            "gambar": "img/logo2.png"
-        }
-    ]
+  "design": [
+    {
+      "kategori": "Web Design",
+      "nama": "Sestcly",
+      "link": "#",
+      "gambar": "img/logo1.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Shoping",
+      "link": "#",
+      "gambar": "img/logo2.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Payment",
+      "link": "#",
+      "gambar": "img/logo3.png"
+    },
+    {
+      "kategori": "Web Design",
+      "nama": "Appsventory",
+      "link": "#",
+      "gambar": "img/logo4.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Whatschat",
+      "link": "#",
+      "gambar": "img/logo5.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Clock",
+      "link": "#",
+      "gambar": "img/logo6.png"
+    },
+    {
+      "kategori": "Web Design",
+      "nama": "Sestcly",
+      "link": "#",
+      "gambar": "img/logo1.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Shoping",
+      "link": "#",
+      "gambar": "img/logo2.png"
+    },
+    {
+      "kategori": "App Design",
+      "nama": "Clock",
+      "link": "#",
+      "gambar": "img/logo6.png"
+    },
+    {
+      "kategori": "Web Design",
+      "nama": "Sestcly",
+      "link": "#",
+      "gambar": "img/logo1.png"
+    }
+  ]
 }

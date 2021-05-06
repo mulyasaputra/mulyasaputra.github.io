@@ -1,22 +1,22 @@
 {
-      "apps": [
-        {
-            "fres": "Sestc",
-            "spn": "ly",
-            "href": "#",
-            "pic": "logo1.png"
-        },
-        {
-            "fres": "Shop",
-            "spn": "ing",
-            "href": "#",
-            "pic": "logo2.png"
-        },
-        {
-            "fres": "Pay",
-            "spn": "ment",
-            "href": "#",
-            "pic": "logo3.png"
-        }
-    ]
+  "apps": [
+    {
+      "fres": "C",
+      "spn": "lock",
+      "href": "#",
+      "pic": "logo6.png"
+    },
+    {
+      "fres": "Shop",
+      "spn": "ing",
+      "href": "#",
+      "pic": "logo2.png"
+    },
+    {
+      "fres": "Whats",
+      "spn": "chat",
+      "href": "#",
+      "pic": "logo5.png"
+    }
+  ]
 }
