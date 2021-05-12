@@ -7,7 +7,7 @@ function tampilData() {
           data.gambar +
           '" class="image"><h4>' +
           data.nama +
-          '</h4><a href="' +
+          '</h4><a target="_blank" href="' +
           data.link +
           '"><span class="text">View More <i class="fas fa-arrow-right"></i></span></a></div></div>'
       );
