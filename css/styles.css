@@ -1,64 +1,64 @@
 /*Font Design*/
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
 
 /*Root*/
 html {
   scroll-behavior: smooth;
 }
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: 'Poppins' , Sans-Serif;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Poppins", Sans-Serif;
 }
-#myproject{
+#myproject {
   margin-top: 2rem;
   color: white;
 }
-svg{
+svg {
   margin-top: -1px;
 }
-.atara{
+.atara {
   margin-bottom: -3px;
 }
-.atara1{
+.atara1 {
   margin-top: -21px;
 }
-.title-section{
-  color: rgb(50,50,50);
+.title-section {
+  color: rgb(50, 50, 50);
   text-align: center;
   font-family: Nunito sans;
   font-size: 35px;
 }
-.title-section span{
+.title-section span {
   color: crimson;
 }
 
 /*jumbotron styles start*/
-#jumbotron{
+#jumbotron {
   display: flex;
   height: 600px;
-  background-color: #22222A;
+  background-color: #22222a;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: white;
 }
-#jumbotron .welcome{
+#jumbotron .welcome {
   margin-top: 80px;
   text-align: center;
   margin-bottom: 10px;
   color: white;
   font-size: 60px;
 }
-#jumbotron p{
+#jumbotron p {
   text-align: center;
   font-size: 40px;
   width: 80%;
   margin-bottom: 80px;
 }
-button{
-  background-color: rgba(0,0,0,0.2);
+button {
+  background-color: rgba(0, 0, 0, 0.2);
   font-weight: bold;
   font-size: 24px;
   color: crimson;
@@ -68,34 +68,34 @@ button{
   border: 4px solid crimson;
   cursor: pointer;
 }
-button:hover{
+button:hover {
   background-color: crimson;
   color: white;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 /*Project styles start*/
-.title-project{
+.title-project {
   display: flex;
   margin: 0 15px;
   align-items: center;
   justify-content: space-between;
-  color: rgb(50,50,50);
+  color: rgb(50, 50, 50);
 }
-.title-project h2{
+.title-project h2 {
   font-size: 26px;
   font-weight: 900;
 }
-.title-project a{
+.title-project a {
   font-size: 24px;
   font-weight: 800;
   color: #8d8d8d;
-  font-family: 'Nunito sans', Sans-Serif;
+  font-family: "Nunito sans", Sans-Serif;
 }
-.title-project a:hover{
+.title-project a:hover {
   color: crimson;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
-.project-album{
+.project-album {
   display: flex;
   flex-wrap: wrap;
   margin: 10px auto;
@@ -111,18 +111,18 @@ button:hover{
   width: 100%;
   height: auto;
   border-radius: 2%;
-  box-shadow: 5px 4px 7px #9B9B9B;
+  box-shadow: 5px 4px 7px #9b9b9b;
 }
 .overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(9,0,0,0.7);
+  background-color: rgba(9, 0, 0, 0.7);
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   border-radius: 2%;
 }
 .container:hover .overlay {
@@ -140,12 +140,12 @@ button:hover{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-.text span{
+.text span {
   color: crimson;
 }
 
 /*Tools styles start*/
-#tools{
+#tools {
   margin-top: -5px;
   color: white;
   height: 600px;
@@ -153,19 +153,19 @@ button:hover{
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  background-color: #22222A;
+  background-color: #22222a;
 }
-#tools .title-section{
+#tools .title-section {
   color: white;
 }
-.shoftware{
+.shoftware {
   margin-top: 60px;
   height: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.icon-apps{
+.icon-apps {
   display: flex;
   position: relative;
   width: 30%;
@@ -173,84 +173,24 @@ button:hover{
   align-items: center;
   flex-direction: column;
 }
-.icn{
+.icn {
   display: block;
   width: 100px;
   height: auto;
 }
-/*Contact styles start*/ 
-#contact .judul-kontak{
+/*Contact styles start*/
+#contact .judul-kontak {
   text-align: center;
   margin-bottom: 20px;
   font-size: 16px;
 }
-#contact ul li{
+#contact ul li {
   font-size: 17px;
   text-align: center;
   margin: 8px 0 0 0;
   list-style: none;
 }
-#contact ul li a{
+#contact ul li a {
   color: #22222a;
   margin: 0 12px;
-}
-
-
-/*Responsive Web Design*/
-@media (max-width: 500px) {
-.title-section{
-  font-size: 23px;
-}
-#jumbotron{
-  height: 400px;
-  }
-#jumbotron .welcome{
-  font-size: 23px;
-}
-#jumbotron p{
-  font-size: 15px;
-  width: 90%;
-  margin-bottom: 60px;
-}
-button{
-  font-size: 14px;
-  width: 111px;
-  height: 40px;
-  border-width: 2px;
-}
-#runproject{
-  margin-top: 30px;
-  padding: 0;
-}
-.title-project h2{
-  font-size: 14px;
-}
-.title-project a{
-  font-weight: 700;
-  font-size: 12px;
-}
-.container {
-  width: 100%;
-  margin: 7px 15px;
-}
-.shoftware{
-  margin-top: 40px;
-}
-.icon-apps{
-  width: 40%;
-  margin: 20px 0;
-}
-.icn{
-  width: 67px;
-}
-.judul-kontak p{
-  font-size: 16px;
-}
-#contact ul li{
-  text-align: left;
-  margin: 5px 0 0 20px;
-}
-#contact ul li a{
-  color: #22222a;
-}
 }

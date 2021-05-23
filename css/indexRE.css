@@ -1,0 +1,73 @@
+/* Devices  phones */
+@media screen and (max-width: 434px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  #jumbotron .welcome {
+    font-size: 30px;
+    color: crimson;
+  }
+  #jumbotron p {
+    font-size: 20px;
+  }
+  button {
+    font-size: 17px;
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid crimson;
+  }
+  .title-project h2 {
+    font-size: 20px;
+  }
+  .title-project a {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .container {
+    width: 100%;
+  }
+}
+/* Devices tablets */
+@media (max-width: 652px) {
+  #jumbotron .welcome {
+    font-size: 30px;
+  }
+  #jumbotron p {
+    font-size: 20px;
+  }
+  button {
+    font-size: 17px;
+    width: 180px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid crimson;
+  }
+  .title-project h2 {
+    font-size: 20px;
+  }
+  .title-project a {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .container {
+    width: 100%;
+  }
+}
+/* Devices tablets */
+@media (min-width: 980px) {
+  #jumbotron .welcome {
+    font-size: 40px;
+  }
+  #jumbotron p {
+    font-size: 30px;
+  }
+  .title-project a {
+    font-size: 19px;
+    font-weight: 800;
+  }
+}
+/* evices large desktops */
+@media (min-width: 1200px) {
+}
