@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Browser Phone -->
+    <meta name="theme-color" content="#22222A"/>
+    <meta name="msapplication-navbutton-color" content="#22222A"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#22222A"/>
+    <!-- End Meta Browser -->
     <title>Project</title>
     <link rel="shortcut icon" type="image/jpg" href="icon/favicon.png" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
@@ -20,7 +26,7 @@
         </div>
         <ul class="menu">
           <li><a href="https://mulyasaputra.github.io" class="menu-btn">Dashboard</a></li>
-          <li><a href="media.html" class="menu-btn">Media</a></li>
+          <li><a href="media" class="menu-btn">Media</a></li>
           <li><a href="https://mulyasaputra.github.io/visite/" class="menu-btn">Card</a></li>
         </ul>
         <div class="menu-btn">
@@ -30,9 +36,9 @@
     </nav>
     <!-- jumbotron section start -->
     <section id="jumbotron">
-      <h1 class="welcome">Welcome to my project</h1>
-      <p>These are some of the projects that we did for our clients.</p>
-      <a href="#contact"><button class="btn" type="submit">Contact Us</button></a>
+      <h1 data-aos="zoom-in-up" class="welcome">Welcome to my project</h1>
+      <p data-aos="zoom-out-right" data-aos-delay="200">These are some of the projects that we did for our clients.</p>
+      <a href="https://t.me/saputra112"><button class="btn" type="submit">Contact Us</button></a>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#22222A" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,154.7C640,171,800,181,960,181.3C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
@@ -58,6 +64,14 @@
     </footer>
     <!-- Script section -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        // Settings 
+        duration: 800,
+        once: false,
+      });
+    </script>
     <script src="js/script.js"></script>
     <script src="js/package.js"></script>
   </body>

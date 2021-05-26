@@ -1,32 +1,70 @@
+:root{
+  --primary-color: #B00000;
+}
 /* Devices  phones */
-@media screen and (max-width: 434px) {
-  body {
-    padding: 0;
-    margin: 0;
+@media (max-width: 434px) {
+  #jumbotron{
+    height: 500px;
   }
   #jumbotron .welcome {
-    font-size: 30px;
-    color: crimson;
+    font-size: 27px !important;
+    color: var(--primary-color);
   }
-  #jumbotron p {
-    font-size: 20px;
-  }
-  button {
+  a button {
     font-size: 17px;
-    width: 180px;
-    height: 60px;
-    border-radius: 50px;
-    border: 2px solid crimson;
+    width: 140px;
+    height: 45px;
   }
-  .title-project h2 {
-    font-size: 20px;
+  .title-section{
+    font-size: 21px;
   }
-  .title-project a {
-    font-size: 15px;
-    font-weight: 800;
+  .menu-btn {
+    display: block;
+    z-index: 999;
   }
-  .container {
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
     width: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    background: #111;
+    text-align: center;
+    padding-top: 80px;
+  }
+  .navbar .menu.active {
+    display: block;
+    background-color: #22222a;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .logo a {
+  font-size: 30px;
+  font-weight: 500;
+}
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 30px;
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--primary-color);
+  }
+  .navbar.sticky, .navbar{
+    padding: 2px 0;
+  }
+  .scroll-up-btn {
+    right: 15px;
+    bottom: 15px;
+    height: 38px;
+    width: 38px;
+    font-size: 23px;
+    line-height: 38px;
+    border-radius: 50%;
   }
 }
 /* Devices tablets */
@@ -35,20 +73,20 @@
     font-size: 30px;
   }
   #jumbotron p {
-    font-size: 20px;
+    font-size: 16px;
   }
   button {
     font-size: 17px;
     width: 180px;
     height: 60px;
     border-radius: 50px;
-    border: 2px solid crimson;
+    border: 2px solid var(--primary-color);
   }
   .title-project h2 {
     font-size: 20px;
   }
   .title-project a {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 800;
   }
   .container {
@@ -66,6 +104,10 @@
   .title-project a {
     font-size: 19px;
     font-weight: 800;
+  }
+  #contact{
+  text-align: center;
+  font-size: 30px;
   }
 }
 /* evices large desktops */

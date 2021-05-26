@@ -96,7 +96,7 @@ a {
 /*Responsive Web Design*/
 @media (max-width: 644px) {
   #jumbotron {
-    height: 400px;
+    height: 410px;
   }
   #jumbotron .welcome {
     font-size: 23px;
@@ -133,10 +133,10 @@ a {
     height: 400px;
   }
   #jumbotron .welcome {
-    font-size: 40px;
+    font-size: 20px;
   }
   #jumbotron p {
-    font-size: 19px;
+    font-size: 14px;
     width: 90%;
     margin-bottom: 60px;
   }

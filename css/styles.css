@@ -1,37 +1,73 @@
 /*Font Design*/
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&family=Poppins:wght@200;300;400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
 
 /*Root*/
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 * {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style-type: none;
   font-family: "Poppins", Sans-Serif;
 }
-#myproject {
-  margin-top: 2rem;
-  color: white;
-}
-svg {
+svg{
   margin-top: -1px;
-}
-.atara {
-  margin-bottom: -3px;
-}
-.atara1 {
-  margin-top: -21px;
 }
 .title-section {
   color: rgb(50, 50, 50);
   text-align: center;
-  font-family: Nunito sans;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 35px;
 }
 .title-section span {
-  color: crimson;
+  color: var(--primary-color);
+}
+
+  /* navbar styling */
+.max-width{
+  padding: 0 20px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  padding: 15px 0;
+  background: var(--primary-color);
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+}
+.navbar .logo a span {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span {
+  color: #fff;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  display: block;
+  color: #fff;
+  font-size: 25px;
+  margin-left: 25px;
 }
 
 /*jumbotron styles start*/
@@ -61,19 +97,22 @@ button {
   background-color: rgba(0, 0, 0, 0.2);
   font-weight: bold;
   font-size: 24px;
-  color: crimson;
+  color: var(--primary-color);
   width: 210px;
   height: 75px;
   border-radius: 50px;
-  border: 4px solid crimson;
+  border: 4px solid var(--primary-color);
   cursor: pointer;
-}
-button:hover {
-  background-color: crimson;
-  color: white;
   transition: 0.5s ease;
 }
+button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
 /*Project styles start*/
+#myproject {
+  margin-top: 2rem;
+}
 .title-project {
   display: flex;
   margin: 0 15px;
@@ -92,7 +131,7 @@ button:hover {
   font-family: "Nunito sans", Sans-Serif;
 }
 .title-project a:hover {
-  color: crimson;
+  color: var(--primary-color);
   transition: 0.5s ease;
 }
 .project-album {
@@ -111,7 +150,7 @@ button:hover {
   width: 100%;
   height: auto;
   border-radius: 2%;
-  box-shadow: 5px 4px 7px #9b9b9b;
+  box-shadow: 5px 6px 14px -9px #000000
 }
 .overlay {
   position: absolute;
@@ -141,56 +180,61 @@ button:hover {
   text-align: center;
 }
 .text span {
-  color: crimson;
+  color: var(--primary-color);
 }
 
-/*Tools styles start*/
-#tools {
-  margin-top: -5px;
-  color: white;
-  height: 600px;
-  font-size: 22px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  background-color: #22222a;
+/* contact ease styling */
+#contact{
+  padding: 0 20px;
 }
-#tools .title-section {
-  color: white;
+.contact a{
+  color: #22222a;
+  font-family: 'Poppins', sans-serif;
 }
-.shoftware {
-  margin-top: 60px;
-  height: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.icon-apps {
-  display: flex;
-  position: relative;
-  width: 30%;
-  margin: 20px 0;
-  align-items: center;
-  flex-direction: column;
-}
-.icn {
-  display: block;
-  width: 100px;
-  height: auto;
-}
-/*Contact styles start*/
-#contact .judul-kontak {
+.judul-kontak{
   text-align: center;
   margin-bottom: 20px;
-  font-size: 16px;
 }
-#contact ul li {
-  font-size: 17px;
+
+/* footer section styling */
+footer {
+  background: #22222a;
+  color: #fff;
+  padding-bottom: 20px;
   text-align: center;
-  margin: 8px 0 0 0;
-  list-style: none;
 }
-#contact ul li a {
-  color: #22222a;
-  margin: 0 12px;
+
+/*Button Up*/
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 60px;
+  width: 57px;
+  background: var(--primary-color);
+  right: 30px;
+  bottom: 40px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 40px;
+  border-radius: 10px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover {
+  filter: brightness(90%);
 }
