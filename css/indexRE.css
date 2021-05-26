@@ -1,31 +1,8 @@
-:root{
-  --primary-color: #B00000;
+:root {
+  --primary-color: #b00000;
 }
-/* Devices  phones */
-@media (max-width: 434px) {
-  #jumbotron{
-    height: 500px;
-  }
-  #jumbotron .welcome {
-<<<<<<< HEAD
-    font-size: 27px !important;
-    color: var(--primary-color);
-=======
-    font-size: 25px !important;
-    color: crimson;
-  }
-  #jumbotron p {
-    font-size: 20px;
->>>>>>> 7acaee1f1f452b840bb5fbdf6dbd9dd4b281635c
-  }
-  a button {
-    font-size: 17px;
-    width: 140px;
-    height: 45px;
-  }
-  .title-section{
-    font-size: 21px;
-  }
+/* Navbar RE */
+@media (max-width: 853px) {
   .menu-btn {
     display: block;
     z-index: 999;
@@ -52,18 +29,43 @@
     display: block;
   }
   .navbar .logo a {
-  font-size: 30px;
-  font-weight: 500;
-}
+    font-size: 30px;
+    font-weight: 500;
+  }
   .navbar .menu li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 30px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     color: var(--primary-color);
   }
-  .navbar.sticky, .navbar{
+  .navbar.sticky,
+  .navbar {
     padding: 2px 0;
+  }
+}
+/* Devices  phones */
+@media (max-width: 470px) {
+  #jumbotron {
+    height: 500px;
+  }
+  #jumbotron .welcome {
+    font-size: 27px;
+    color: var(--primary-color);
+  }
+  #jumbotron p {
+    font-size: 20px;
+  }
+  a button {
+    font-size: 17px;
+    width: 140px;
+    height: 45px;
+  }
+  .title-section {
+    font-size: 21px;
+  }
+  .container {
+    width: 100%;
   }
   .scroll-up-btn {
     right: 15px;
@@ -76,12 +78,13 @@
   }
 }
 /* Devices tablets */
-@media (max-width: 652px) {
+@media (min-width: 470px) {
   #jumbotron .welcome {
-    font-size: 30px;
+    font-size: 5vw;
   }
   #jumbotron p {
-    font-size: 16px;
+    padding-top: 20px;
+    font-size: 3vw;
   }
   button {
     font-size: 17px;
@@ -97,12 +100,17 @@
     font-size: 12px;
     font-weight: 800;
   }
+  .project-album {
+    display: flex;
+    justify-content: space-between;
+  }
   .container {
-    width: 100%;
+    width: 44%;
+    margin: 15px 16px;
   }
 }
 /* Devices tablets */
-@media (min-width: 980px) {
+@media (min-width: 609px) {
   #jumbotron .welcome {
     font-size: 40px;
   }
@@ -113,11 +121,19 @@
     font-size: 19px;
     font-weight: 800;
   }
-  #contact{
-  text-align: center;
-  font-size: 30px;
+  #contact {
+    text-align: center;
+    font-size: 30px;
   }
 }
 /* evices large desktops */
-@media (min-width: 1200px) {
+@media (min-width: 918px) {
+  .project-album {
+    display: flex;
+    justify-content: space-around;
+  }
+  .container {
+    width: 30%;
+    margin: 15px 10px;
+  }
 }
