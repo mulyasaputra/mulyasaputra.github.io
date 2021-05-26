@@ -7,8 +7,16 @@
     height: 500px;
   }
   #jumbotron .welcome {
+<<<<<<< HEAD
     font-size: 27px !important;
     color: var(--primary-color);
+=======
+    font-size: 25px !important;
+    color: crimson;
+  }
+  #jumbotron p {
+    font-size: 20px;
+>>>>>>> 7acaee1f1f452b840bb5fbdf6dbd9dd4b281635c
   }
   a button {
     font-size: 17px;
