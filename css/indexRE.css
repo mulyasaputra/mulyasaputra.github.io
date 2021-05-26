@@ -64,6 +64,9 @@
   .title-section {
     font-size: 21px;
   }
+   .title-project a {
+    font-size: 17px;
+  }
   .container {
     width: 100%;
   }
