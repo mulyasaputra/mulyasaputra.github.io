@@ -1,4 +1,21 @@
-$.getJSON("data/website.json", function (data) {
+function tampilData() {
+  $.getJSON("data/project.json", function (data) {
+    let design = data.design;
+    $.each(design, function (i, data) {
+      $("#daftar").append(
+        '<div class="title-project"><div class="container"><img src="img/' +
+          data.gambar +
+          '" class="image"><h4>' +
+          data.nama +
+          '</h4><a target="_blank" href="' +
+          data.link +
+          '"><span class="text">View More <i class="fas fa-arrow-right"></i></span></a></div></div>'
+      );
+    });
+  });
+}
+
+$.getJSON("data/indexDT.json", function (data) {
   let website = data.website;
   $.each(website, function (i, data) {
     $("#website").append(
@@ -15,7 +32,7 @@ $.getJSON("data/website.json", function (data) {
   });
 });
 
-$.getJSON("data/design.json", function (data) {
+$.getJSON("data/indexDT.json", function (data) {
   let design = data.design;
   $.each(design, function (i, data) {
     $("#design").append(
@@ -32,19 +49,21 @@ $.getJSON("data/design.json", function (data) {
   });
 });
 
-$.getJSON("data/apps.json", function (data) {
+$.getJSON("data/indexDT.json", function (data) {
   let apps = data.apps;
   $.each(apps, function (i, data) {
     $("#apps").append(
-      '<div class="container" data-aos="zoom-in-up"><a target="_blank" href="' +
-        data.href +
+      '<div class="container" data-aos="fade-right"><a target="_blank" href="' +
+        data.link +
         '"><img src="img/' +
-        data.pic +
+        data.img +
         '" alt="Payment" class="image"><div class="overlay"><div class="text">' +
-        data.fres +
+        data.start +
         "<span>" +
-        data.spn +
+        data.end +
         "</span></div></div></a></div>"
     );
   });
 });
+
+tampilData();
