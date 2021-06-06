@@ -73,7 +73,7 @@ svg {
   display: flex;
   flex-wrap: wrap;
   margin: 10px auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .container {
   position: relative;
@@ -91,6 +91,9 @@ svg {
 }
 a {
   color: rgb(50, 50, 50);
+}
+.text {
+  font-size: 12px;
 }
 
 /*Responsive Web Design*/
