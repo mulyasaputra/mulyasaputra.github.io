@@ -1,0 +1,20 @@
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #bb0000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #bb0000,
+    #d50066,
+    #bd53b8,
+    #7b86ea,
+    #00aaf4
+  );
+}
