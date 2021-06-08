@@ -1,5 +1,4 @@
 {
-  // Apps Design Section
   "apps": [
     {
       "start": "Sky",
@@ -20,8 +19,6 @@
       "img": "logo5.png"
     }
   ],
-
-  // Web Design Section
   "design": [
     {
       "start": "Pay",
@@ -42,15 +39,7 @@
       "img": "logo4.png"
     }
   ],
-
-  // Web Project Section
   "website": [
-    {
-      "start": "Sestc",
-      "end": "ly",
-      "link": "https://dribbble.com/shots/15355893-Sestcly",
-      "img": "logo1.png"
-    },
     {
       "start": "By",
       "end": "Link",
@@ -58,10 +47,16 @@
       "img": "logo8.png"
     },
     {
-      "start": "Pay",
-      "end": "ment",
-      "link": "https://dribbble.com/shots/15398232-Payment",
-      "img": "logo3.png"
+      "start": "Apps",
+      "end": "Ventory",
+      "link": "https://mulyasaputra.github.io",
+      "img": "logo4.png"
+    },
+    {
+      "start": "View",
+      "end": "More",
+      "link": "#",
+      "img": "logo4.png"
     }
   ]
 }
