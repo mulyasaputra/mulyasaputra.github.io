@@ -1,3 +1,4 @@
+//  Script for project.html
 function tampilData() {
   $.getJSON("data/project.json", function (data) {
     let design = data.design;
@@ -15,6 +16,31 @@ function tampilData() {
   });
 }
 
+tampilData();
+function data() {
+  var sel = document.getElementById("option").value;
+  // document.getElementById("demo").innerHTML = sel;
+  console.log(sel);
+}
+$.getJSON("data/project.json", function (data) {
+  let design = data.design;
+  let content = " ";
+});
+
+// $.each(design, function (i, data) {
+//   if (data.kategori == set) {
+//     content +=
+//       '<div class="title-project"><div class="container"><img src="img/' +
+//       data.gambar +
+//       '" class="image"><h4>' +
+//       data.nama +
+//       '</h4><a target="_blank" href="' +
+//       data.link +
+//       '"><span class="text">View More <i class="fas fa-arrow-right"></i></span></a></div></div>';
+//   }
+// });
+
+// stript for index.html
 $.getJSON("data/indexDT.json", function (data) {
   let website = data.website;
   $.each(website, function (i, data) {
@@ -65,5 +91,3 @@ $.getJSON("data/indexDT.json", function (data) {
     );
   });
 });
-
-tampilData();

@@ -50,7 +50,7 @@ svg {
   transition: 0.5s ease;
 }
 /* Project */
-.tipe {
+#option {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   font-family: Nunito sans;
@@ -115,7 +115,7 @@ a {
     height: 40px;
     border-width: 2px;
   }
-  .tipe {
+  #option {
     font-size: 11px;
   }
   .conten {

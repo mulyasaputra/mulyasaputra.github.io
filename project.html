@@ -65,12 +65,12 @@
     <!-- Link section start -->
     <section id="Project">
       <div class="conten">
-        <h2>Project</h2>
-        <select class="tipe">
-          <option class="btna">All Project</option>
-          <option class="btna">Web Design</option>
-          <option class="btna">App Design</option>
-          <option class="btna">App Project</option>
+        <h2 id="demo">Project</h2>
+        <select id="option" OnChange="data()">
+          <option value="All">All Project</option>
+          <option value="Web">Web Design</option>
+          <option value="App">App Design</option>
+          <option value="Apps">App Project</option>
         </select>
       </div>
       <div id="list">
@@ -96,12 +96,5 @@
     </script>
     <script src="js/script.js"></script>
     <script src="js/data.js"></script>
-    <!-- <script>
-      $(".btna").on("click", function () {
-        $(this).addClass("active");
-        let kategori = $(this).html();
-        console.log(kategori);
-      });
-    </script> -->
   </body>
 </html>
