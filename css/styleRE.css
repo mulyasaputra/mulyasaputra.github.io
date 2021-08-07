@@ -14,6 +14,19 @@
   .text2 {
     font-size: 10px;
   }
+  .video {
+    padding: 5px;
+  }
+  .embed {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .Video2 {
+    margin-top: 15px;
+  }
+  .embed img {
+    width: 90%;
+  }
 }
 @media (max-width: 414px) {
   .hiden5,
@@ -175,7 +188,6 @@
   }
   /* Video sectio */
   .video {
-    background-color: #888192;
     padding: 15px 5px 30px 5px;
   }
   .embed img {
