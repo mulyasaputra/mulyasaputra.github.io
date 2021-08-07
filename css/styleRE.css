@@ -1,8 +1,8 @@
-@media (max-width: 358px) {
+/* @media (max-width: 358px) {
   .view img {
     display: none;
   }
-}
+} */
 @media (max-width: 401px) {
   /* herosection section */
   .herosection {
@@ -31,6 +31,32 @@
   }
   .embed img {
     width: 90%;
+  }
+  .conten1 {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+  .conten1 .view img {
+    display: none;
+  }
+  .conten1 .view .review p {
+    font-size: 17px !important;
+  }
+  .view {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .review {
+    text-align: center;
+  }
+  .conten1 .view .review h5 {
+    margin-top: 50px;
+    font-size: 16px !important;
+  }
+  .conten1 .view .review span {
+    font-size: 12px !important;
   }
 }
 @media (max-width: 414px) {
