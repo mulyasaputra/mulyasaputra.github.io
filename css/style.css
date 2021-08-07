@@ -179,7 +179,6 @@ h1 span {
   font-family: Thin;
   font-weight: 300;
   font-size: 36px;
-  line-height: 44px;
   text-align: left;
   line-height: 35px;
 }
@@ -194,7 +193,6 @@ h1 span {
 #card p {
   font-family: thin;
   font-size: 29px;
-  line-height: 35px;
   line-height: 30px;
   color: #ece5f7;
 }
