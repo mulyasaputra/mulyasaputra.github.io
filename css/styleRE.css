@@ -1,4 +1,4 @@
-/* @media (max-width: 358px) {
+/* @media (max-width: 360px) {
   .view img {
     display: none;
   }
@@ -85,6 +85,17 @@
   .conten1 .view .review span {
     font-size: 8px;
   }
+  .end1 {
+    display: none;
+  }
+  .footer,
+  .logoIcon a {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .footer {
+    width: 70%;
+  }
 }
 @media only screen and (max-width: 582px) and (min-width: 414px) {
   .view img {
@@ -92,6 +103,11 @@
   }
   .view .review p {
     font-size: 30%;
+  }
+  .footer,
+  .logoIcon a {
+    font-size: 14px;
+    line-height: 1.4;
   }
 }
 @media (max-width: 663px) {
@@ -190,11 +206,6 @@
   }
 }
 @media (max-width: 1170px) {
-  .Contact,
-  footer {
-    display: none;
-  }
-
   /* herosection section */
   .herosection {
     background: #1e1d1f;
