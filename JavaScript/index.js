@@ -2,7 +2,7 @@ var width = screen.width;
 $(document).ready(function () {
   $(window).scroll(function () {
     // PotatoScreen
-    if (width < 360) {
+    if (width < 308) {
       alert(
         "Maaf ukuran layar hp anda terlalu kentang. \n Web ini belum sempurna untu ukuran layar kurang dari 360px, \n Buka dalam mode desktop atau ganti dengan hp yang memiliki \n ukuran layar lebih besar dari yang kau pegang sekarang"
       );
