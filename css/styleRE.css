@@ -1,0 +1,126 @@
+@media (max-width: 401px) {
+  /* herosection section */
+  .herosection {
+    height: 90vh;
+  }
+  .desk {
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-right: 0;
+  }
+  .tulisan {
+    text-align: center;
+  }
+  .text2 {
+    font-size: 10px;
+  }
+}
+@media (max-width: 663px) {
+  /* herosection section */
+  .herosection {
+    padding: 0 20px;
+    padding-top: 60px;
+    height: 500px;
+  }
+  .Welcome {
+    flex-direction: column;
+  }
+  .Welcome img {
+    display: none;
+  }
+  h1 {
+    font-family: Medium;
+    font-weight: bold;
+    color: #dc3545;
+  }
+  h1 span {
+    color: #ece5f6;
+  }
+  .desk {
+    width: 100%;
+  }
+  .tulisan button {
+    font-family: thin;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 145px;
+    height: 42px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .tulisan button:hover {
+    background: rgba(240, 248, 255, 0.2);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+  }
+  .text2 {
+    letter-spacing: 1px;
+    font-family: Thin;
+    color: #888192;
+  }
+  /* extension section */
+  .file {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .file img {
+    width: 70px;
+    margin: 10px;
+  }
+}
+/* @media (min-width: 768px) {
+} */
+/* @media (min-width: 992px) {
+} */
+
+@media (max-width: 1170px) {
+  .myCard,
+  .video,
+  .Testimonials,
+  .Contact,
+  footer {
+    display: none;
+  }
+
+  /* herosection section */
+  .herosection {
+    background: #1e1d1f;
+  }
+  .Welcome img {
+    width: 270px;
+  }
+  .herosection {
+    align-items: flex-start;
+  }
+  .Welcome {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  /* extenson section */
+  .file {
+    margin: 7px 10px;
+    padding-bottom: 20px;
+  }
+  .file .hiden7 {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .hiden5,
+  .hiden6 {
+    display: none;
+  }
+  .file img {
+    width: 60px;
+    margin: 0px;
+  }
+}

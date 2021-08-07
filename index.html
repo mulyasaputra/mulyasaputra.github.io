@@ -1,133 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <!-- Primary Meta Tags -->
-    <meta name="title" content="Appsventory: Homepage">
-    <meta name="description" content="Appsventory is a place to upload some of the projects I've worked on.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mulyasaputra.github.io/">
-    <meta property="og:title" content="Appsventory: Homepage">
-    <meta property="og:description" content="Appsventory is a place to upload some of the projects I've worked on.">
-    <meta property="og:image" content="img/metadata.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://mulyasaputra.github.io/">
-    <meta property="twitter:title" content="Appsventory: Homepage">
-    <meta property="twitter:description" content="Appsventory is a place to upload some of the projects I've worked on.">
-    <meta property="twitter:image" content="img/metadata.png">
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta Browser Phone -->
-    <meta name="theme-color" content="#22222A"/>
-    <meta name="msapplication-navbutton-color" content="#22222A"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="#22222A"/>
-    <title>Appventory</title>
-    <!-- Favicon Website -->
-    <link rel="shortcut icon" type="image/jpg" href="icon/favicon.png" />
-    <!-- List css -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/indexRE.css" />
-    <link rel="stylesheet" href="css/universal.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/styleRE.css" />
+    <link rel="stylesheet" href="css/ReviewOP.css" />
+    <link rel="stylesheet" href="css/NavbarRE.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>InSketch | Dashboard</title>
   </head>
   <body>
-    <!-- Button Up -->
-    <div class="scroll-up-btn">
-      <i class="fas fa-angle-up"></i>
-    </div>
-    <!-- Navbar section -->
     <nav class="navbar">
-      <div class="max-width">
-        <div class="logo">
-          <a href="https://mulyasaputra.github.io">Apps<span>Ventory</span></a>
-        </div>
-        <ul class="menu">
-          <li><a href="#jumbotron" class="menu-btn">Dashboard</a></li>
-          <li><a href="#runproject" class="menu-btn">Project</a></li>
-          <li><a href="media" class="menu-btn">Media</a></li>
-          <li><a href="#tools" class="menu-btn">Tools</a></li>
+      <div class="logo">In<span>Sketch</span></div>
+      <div class="menu">
+        <ul class="daftar">
+          <a href="#">Welcome </a>
+          <a href="Download.html">Download</a>
+          <a href="License.html">License</a>
+          <a
+            onClick="alert('Untuk saat ini halaman blog belum bisa di akses oleh semua orang termasuk saya')"
+            >Blog</a
+          >
+          <button>Suport</button>
         </ul>
         <div class="menu-btn">
           <i class="fas fa-bars"></i>
         </div>
       </div>
     </nav>
-    <!-- jumbotron section start -->
-    <section id="jumbotron" class="up">
-      <h1 class="welcome" data-aos="zoom-in-up">Welcome to my project</h1>
-      <p data-aos="fade-up-left" data-aos-delay="200">A collection of a few projects that we have been working</p>
-      <a href="#contact"><button type="submit">Contact Us</button></a>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#22222A" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,154.7C640,171,800,181,960,181.3C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-    </svg>
-    <!-- project section start -->
-    <section id="runproject">
-      <h1 class="title-section">Featured <span>Projects</span></h1>
-      <div id="myproject">
-        <div class="title-project">
-          <h2>Web Design</h2>
-          <a href="project">View More <i class="fas fa-arrow-right"></i></a>
+    <div class="herosection">
+      <div class="Welcome">
+        <div class="tulisan">
+          <h1>In<span>Sketch</span></h1>
+          <p class="desk">
+            Adalah website untuk menampung semua project atau gambar yang pernah
+            saya kerjakan yang dapat di unduh dan dapat digunakan oleh siapapun
+            yang dapat menemukan website ini
+          </p>
+          <a href="Download.html"><button>Download</button></a>
+          <p class="text2">Abaikan saja ini website tidak berguna</p>
         </div>
-        <div class="project-album" id="design"></div>
+        <img src="Img/Group.png" alt=gambar">
       </div>
-      <div id="myproject">
-        <div class="title-project">
-          <h2>Web Project</h2>
-          <a href="project">View More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="project-album" id="website"></div>
+    </div>
+    <section class="extension">
+      <div class="tittle">
+        <h4>File Card</h4>
       </div>
-      <div id="myproject">
-        <div class="title-project">
-          <h2>Apps Project</h2>
-          <a href="project">View More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="project-album" id="apps"></div>
+      <div class="file">
+        <img class="hiden1" src="file/aset1.png" />
+        <img class="hiden2" src="file/aset2.png" />
+        <img class="hiden3" src="file/aset3.png" />
+        <img class="hiden4" src="file/aset4.png" />
+        <img class="hiden5" src="file/aset5.png" />
+        <img class="hiden6" src="file/aset6.png" />
+        <img class="hiden7" src="file/aset7.png" />
       </div>
     </section>
-    <svg id="bawang" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#22222a" fill-opacity="1" d="M0,160L120,160C240,160,480,160,720,170.7C960,181,1200,203,1320,213.3L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-    </svg>
-    <!-- Tools section start -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#22222A" fill-opacity="1" d="M0,32L120,26.7C240,21,480,11,720,21.3C960,32,1200,64,1320,80L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path>
-    </svg>
-        <!-- Contact Me section start -->
-    <section id="contact">
-      <div class="judul-kontak">
-        <h1 class="title-section">Contact <span>Me</span></h1>
-        <p>Click one of our contacts below to say hello.</p>
+    <section class="myCard">
+      <div class="tittle">
+        <h4>Design Terbaru</h4>
       </div>
-      <div class="contact">
-        <ul>
-          <li class="far fa-envelope"><a href="mailto:Screative010@gmail.com">&ensp;Email | Screative010@gmail.com</a></li></br>
-          <li class="fab fa-whatsapp"><a href="https://bit.ly/Saputtra_STR">&ensp;Whatsapp | +6281542253290</a></li></br>
-          <li class="far fa-paper-plane"><a href="https://t.me/saputra112">&ensp;Telegram | Saputra112</a></li></br>
-          <li class="fab fa-instagram"><a target="_blank" href="https://instagram.com/Appventory">&ensp;Instgram | Appventory</a></li>
-        </ul>
+      <div class="lembar">
+        <div id="card">
+          <div class="profile">
+            <h4>Mulya<br /><span>Saputra</span></h4>
+            <img src="img/photo.jpg" alt="profile" />
+          </div>
+          <p>
+            “Menurut survei seseorang yang lahir pada hari kamis cenderung
+            menjadi sosok pemarah jika di pukul kepalanya”
+          </p>
+          <div class="tBawah">
+            <div class="icon">
+              <ul class="daftar">
+                <a target="_blank" href="http://bit.ly/Saputtra_STR"
+                  ><i class="fab fa-whatsapp"></i
+                ></a>
+                <a target="_blank" href="http://bit.ly/Saputra_STR"
+                  ><i class="fab fa-telegram-plane"></i
+                ></a>
+                <a target="_blank" href="https://www.instagram.com/saputra_47tr"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a target="_blank" href="https://dribbble.com/Appventory"
+                  ><i class="fab fa-dribbble"></i
+                ></a>
+                <a href="#"><i class="fas fa-donate"></i></a>
+              </ul>
+            </div>
+            <img src="img/Orang.png" alt="gambar orang" />
+          </div>
+        </div>
+        <div class="bam">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam id
+            odit ex at soluta cum recusandae quidem omnis quae doloremque culpa,
+            delectus ducimus quibusdam consequuntur.
+          </p>
+        </div>
       </div>
-    </section> 
-    <!-- footer section start -->
+    </section>
+    <section class="video">
+      <div class="tittle">
+        <h4>Video Keren</h4>
+      </div>
+      <div class="embed">
+        <img src="img/video 1.png" alt="Video Pertama" />
+        <img src="img//video 2.png" alt="Video Kedua" />
+      </div>
+    </section>
+    <section class="Testimonials">
+      <div class="tittle">
+        <h4>Testimonials</h4>
+      </div>
+      <div class="conten1">
+        <div class="view">
+          <img src="img/Profile.png" alt="gambar" />
+          <div class="review">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+              totam error eum illo fugiat quae reprehenderit dolores rem
+              incidunt distinctio.
+            </p>
+            <h5>
+              Lorem Ipsum <br />
+              <span>InSketch</span>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="Contact">
+      <div class="tittle">
+        <h4>kirim pesan pribadi</h4>
+      </div>
+      <div class="contents">
+        <div class="inti">
+          <textarea
+            id="inText"
+            type="text"
+            name="Pesan"
+            placeholder="Tulis Pesan lalu kirim via Whatsapp"
+          ></textarea>
+          <i class="fas fa-paper-plane" id="tombol">
+            <span>Kirim Via Whatsapp</span></i
+          >
+        </div>
+        <div class="akun">
+          <a href="#">Whatsapp</a>
+          <a href="#">Email</a>
+          <a href="#">Telegram</a>
+          <a href="#">Whatsapp</a>
+        </div>
+      </div>
+    </section>
     <footer>
-      <svg class="atara1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1" d="M0,96L80,106.7C160,117,320,139,480,154.7C640,171,800,181,960,181.3C1120,181,1280,171,1360,165.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-      </svg>
-      <div>Appventory | 2021 All rights reserved.</div>
+      <div class="footer">
+        Dibuat Oleh
+        <a href="https://mulyasaputra.github.io/AppsVentory" target="_blank"
+          >Appventory</a
+        >
+        | Didesain Oleh
+        <a href="https://www.instagram.com/saputra_47tr/" target="_blank"
+          >Saya</a
+        >
+      </div>
+      <div class="logoIcon">
+        <a
+          class="fab fa-github"
+          href="https://github.com/mulyasaputra"
+          target="_blank"
+        ></a>
+        <a
+          class="fab fa-linux"
+          href="https://github.com/mulyasaputra"
+          target="_blank"
+        ></a>
+      </div>
     </footer>
-    <!-- Script section -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-      });
-    </script>
-    <script src="js/script.js"></script>
-    <script src="js/data.js"></script>
+    <script src="JavaScript/index.js"></script>
+    <script src="JavaScript/data.js"></script>
   </body>
 </html>

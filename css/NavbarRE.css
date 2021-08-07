@@ -1,0 +1,67 @@
+.menu-btn {
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+@media (min-width: 663px) {
+  .navbar .menu ul a {
+    cursor: pointer;
+  }
+}
+@media (max-width: 663px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+    margin-right: 30px;
+  }
+  .menu-btn i.active:before {
+    content: "\f00d";
+  }
+  .menu .daftar {
+    justify-content: center;
+    position: fixed;
+    z-index: -9;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: #323133;
+    padding-top: 50px;
+    transition: all 0.3s ease;
+  }
+  .menu .daftar.active {
+    left: 0;
+  }
+}
+@media (max-width: 511px) {
+  .menu .daftar {
+    justify-content: end;
+    flex-direction: column;
+  }
+  .daftar button {
+    margin-top: 20px;
+  }
+  .daftar button {
+    margin-left: 0px;
+    width: 100%;
+  }
+  .menu .daftar a {
+    font-family: Thin;
+    margin: 8px 0;
+    font-size: 13px;
+    text-align: left;
+    width: 100%;
+  }
+  .menu .daftar a::after {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #888192;
+    margin-top: 6px;
+  }
+}
+@media (max-width: 375px) {
+  .menu .daftar {
+    height: 290px;
+  }
+}
