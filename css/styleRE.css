@@ -106,13 +106,12 @@
   .end1 {
     display: none;
   }
-  .footer,
-  .logoIcon a {
-    font-size: 14px;
-    line-height: 1.4;
+  #cc {
+    font-family: Light;
+    font-size: 12px;
   }
-  .footer {
-    width: 70%;
+  .logoIcon a {
+    display: none;
   }
 }
 @media only screen and (max-width: 582px) and (min-width: 414px) {

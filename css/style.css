@@ -266,7 +266,7 @@ h1 span {
 }
 /* footer Section */
 footer {
-  font-family: Light;
+  font-family: Medium;
   width: 100%;
   background: var(--Footer);
   color: var(--Dark);

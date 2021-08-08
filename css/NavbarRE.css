@@ -24,14 +24,14 @@
     z-index: -9;
     height: 100vh;
     width: 100%;
-    left: -100%;
-    top: 0;
+    left: 0;
+    top: -100vh;
     background: #323133;
     padding-top: 50px;
     transition: all 0.3s ease;
   }
   .menu .daftar.active {
-    left: 0;
+    top: 0;
   }
 }
 @media (max-width: 511px) {
