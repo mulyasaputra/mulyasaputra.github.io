@@ -1,7 +1,4 @@
 @media (max-width: 376px) {
-  * {
-    overflow-x: hidden;
-  }
   .Contact {
     background: #4b4d55;
     padding: 2px 0 40px 0;
@@ -12,46 +9,6 @@
   }
   .akun {
     margin-top: 40px;
-  }
-  /* send message for me */
-  .inti {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-  #inText,
-  .inti i {
-    width: 95% !important;
-  }
-  #inText {
-    height: 90px;
-    background: #22222a;
-    color: #ece5f7;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-  }
-  .inti i {
-    height: 43px;
-    border-radius: 5px;
-    background: #22222a;
-    margin-top: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    cursor: pointer;
-  }
-  .inti i:hover {
-    background: #2c91fb;
-  }
-  .inti i span {
-    font-size: 11px;
-    font-family: Thin;
-    width: 100%;
-    text-align: center;
   }
 }
 @media (max-width: 401px) {
@@ -109,6 +66,15 @@
   .conten1 .view .review span {
     font-size: 12px !important;
   }
+  /* FileSectuon */
+  .extension {
+    padding: 10px 0;
+  }
+  .extension .file img {
+    /* margin: 10px 20px;
+      padding-bottom: 30px; */
+    width: 50px !important;
+  }
 }
 @media (max-width: 414px) {
   .hiden5,
@@ -124,7 +90,8 @@
     width: 100%;
   }
   .conten1 .view img {
-    height: 60%;
+    margin-right: 0px;
+    width: 60%;
   }
   .conten1 .view .review p {
     line-height: 1;
@@ -149,9 +116,6 @@
   }
 }
 @media only screen and (max-width: 582px) and (min-width: 414px) {
-  .view img {
-    height: 60% !important;
-  }
   .view .review p {
     font-size: 30%;
   }
@@ -214,12 +178,12 @@
   }
   /* extension section */
   .file {
-    margin: 0;
-    padding-bottom: 0;
+    margin: 0 !important;
+    padding-bottom: 0 !important;
   }
   .file img {
-    width: 70px;
-    margin: 10px;
+    width: 70px !important;
+    margin: 10px !important;
   }
   /* Card section */
   .myCard {
@@ -244,7 +208,7 @@
     width: 90%;
   }
   .view img {
-    height: 70%;
+    width: 70%;
   }
   .view .review p {
     font-size: 13px;
@@ -254,6 +218,10 @@
   }
   .view .review span {
     font-size: 10px;
+  }
+  /* Contact sestion */
+  .contents .inti #inText {
+    height: 170px;
   }
 }
 @media (max-width: 1170px) {
@@ -322,11 +290,9 @@
     width: 94%;
   }
   /* Testimonial section */
-  .view {
-    width: 90%;
-  }
   .view img {
-    height: 90%;
+    margin-right: 30px;
+    width: 90%;
   }
   .view .review p {
     font-size: 13px;

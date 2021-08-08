@@ -11,9 +11,23 @@
   src: url(../font/HelveticaNeue-Thin.woff);
 }
 
+:root {
+  --Footer: #acacac;
+  --Aktif: #4b4d55;
+  --Non-Aktif: #1d1d1f;
+  --Passive: #888192;
+  --Button-Blur: rgba(240, 248, 255, 0.2);
+  --color: #1d1d1f;
+  --Blur: rgba(0, 0, 0, 0.11);
+  --Red: #dc3545;
+  --White: #ece5f6;
+  --Biru: #2c91fb;
+  --Gray: #888192;
+  --Dark: #22222a;
+}
 body {
-  background: #22222a;
-  color: #ece5f7;
+  background: var(--Non-Aktif);
+  color: var(--White);
   font-family: Medium;
   padding: 0;
   margin: 0;
@@ -33,42 +47,42 @@ img {
   position: fixed;
   letter-spacing: 2px;
   width: 100%;
-  background: rgba(240, 248, 255, 0.2);
+  background: var(--Blur);
   backdrop-filter: blur(100px);
   padding: 10px 0;
+  z-index: 999;
 }
 .logo {
   font-family: Medium;
   font-size: 25px;
   line-height: 33px;
-  color: #dc3545;
+  color: vaR(--Red);
   padding-left: 30px;
 }
 .logo span {
-  color: #ece5f7;
+  color: var(--White);
 }
 
 .daftar {
   display: flex;
   align-items: center;
-  color: #ece5f7;
+  color: var(--White);
   margin: auto;
   padding-right: 30px;
 }
 .daftar a {
   font-family: Thin;
-  color: #ece5f7;
+  color: var(--White);
   text-decoration: none;
   margin: 0 10px;
 }
 .daftar button {
   letter-spacing: 1.5px;
   font-family: Medium;
-  color: #22222a;
+  color: var(--Dark);
   margin-left: 15px;
   width: 89px;
   height: 30px;
-  background: #ece5f6;
   border-radius: 51px;
   border: 0;
 }
@@ -88,10 +102,10 @@ img {
 h1 {
   font-family: Medium;
   font-weight: bold;
-  color: #dc3545;
+  color: var(--Red);
 }
 h1 span {
-  color: #ece5f6;
+  color: var(--White);
 }
 .desk {
   width: 70%;
@@ -105,7 +119,7 @@ h1 span {
   font-family: thin;
   font-size: 14px;
   letter-spacing: 3px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--White);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -114,11 +128,11 @@ h1 span {
   height: 42px;
   margin-top: 100px;
   margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: var(--Dark);
+  border: 1px solid var(--Gray);
 }
 .tulisan button:hover {
-  background: rgba(240, 248, 255, 0.2);
+  background: var(--Button-Blur);
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
@@ -126,11 +140,11 @@ h1 span {
 .text2 {
   letter-spacing: 1px;
   font-family: Thin;
-  color: #888192;
+  color: var(--Gray);
 }
 /* FileSectuon */
 .extension {
-  background-color: #4b4d55;
+  background-color: var(--Aktif);
   padding: 15px 0;
   text-align: center;
 }
@@ -158,14 +172,14 @@ h1 span {
   grid-template-columns: 440px auto;
 }
 .bam {
-  background-color: #dc3545;
+  background-color: var(--Red);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 #card {
   width: 411px;
   text-align: center;
-  background: #2c91fb;
+  background: var(--Biru);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
@@ -173,7 +187,7 @@ h1 span {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #ece5f7;
+  color: var(--White);
 }
 .profile h4 {
   font-family: Thin;
@@ -188,13 +202,13 @@ h1 span {
 .profile img {
   height: 99px;
   border-radius: 100%;
-  border: 7px solid rgba(240, 248, 255, 0.2);
+  border: 7px solid var(--Button-Blur);
 }
 #card p {
   font-family: thin;
   font-size: 29px;
   line-height: 30px;
-  color: #ece5f7;
+  color: var(--White);
 }
 .tBawah {
   display: flex;
@@ -209,7 +223,7 @@ h1 span {
   font-size: 25px;
 }
 .video {
-  background-color: #888192;
+  background-color: var(--Passive);
   padding: 15px 0 50px 0;
 }
 .embed {
@@ -219,16 +233,6 @@ h1 span {
 .embed img {
   align-self: center;
   justify-self: center;
-}
-footer {
-  font-family: Light;
-  width: 100%;
-  background: #dc3545;
-  height: 7vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
 }
 /* Testimonials */
 .conten1 {
@@ -244,7 +248,7 @@ footer {
   place-items: center;
 }
 .view img {
-  height: 80%;
+  width: 70%;
 }
 .view .review p {
   line-height: 1.3;
@@ -253,22 +257,32 @@ footer {
 }
 .view .review h5 {
   font-size: 14px;
-  color: #ece5f7;
+  color: var(--White);
 }
 .view .review span {
   font-size: 12px;
   line-height: 22px;
-  color: #adadad;
+  color: var(--Passive);
 }
+/* footer Section */
 footer {
+  font-family: Light;
+  width: 100%;
+  background: var(--Footer);
+  color: var(--Dark);
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
   cursor: pointer;
 }
 footer a {
   text-decoration: none;
-  color: #ece5f7;
+  color: var(--Dark);
 }
 footer a:hover {
-  color: #22222a;
+  color: var(--Red);
   font-weight: bold;
 }
 .logoIcon a {
@@ -278,7 +292,7 @@ footer a:hover {
 
 /* contact Us */
 .Contact {
-  background: #4b4d55;
+  background: var(--Aktif);
   padding: 2px 0 40px 0;
 }
 .contents {
@@ -289,36 +303,40 @@ footer a:hover {
   margin-top: 40px;
 }
 .akun a {
-  color: #ece5f6;
+  color: var(--White);
   margin: 0 10px;
 }
 .akun a:hover {
-  color: #dc3545;
+  color: var(--Red);
 }
 /* send message for me */
-#inText {
-  height: 90px;
-  width: 60vh;
-  background: #22222a;
-  color: #ece5f7;
+.contents .inti {
+  width: 90%;
+}
+.contents .inti #inText,
+.contents .inti i {
+  width: 100%;
   border-radius: 5px;
+}
+.contents .inti #inText {
+  height: 200px;
+  background: var(--Non-Aktif);
+  color: Var(--White);
   border: none;
   outline: none;
 }
-.inti i {
-  width: 60vh;
+.contents .inti i {
+  padding-left: 20px;
   height: 40px;
-  border-radius: 5px;
-  background: #22222a;
+  background: var(--Non-Aktif);
   margin-top: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
   cursor: pointer;
 }
 .inti i:hover {
-  background: #2c91fb;
+  background: var(--Biru);
 }
 .inti i span {
   font-size: 14px;
