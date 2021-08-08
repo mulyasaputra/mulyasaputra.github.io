@@ -1,7 +1,4 @@
 @media (max-width: 376px) {
-  * {
-    overflow-x: hidden;
-  }
   .Contact {
     background: #4b4d55;
     padding: 2px 0 40px 0;
