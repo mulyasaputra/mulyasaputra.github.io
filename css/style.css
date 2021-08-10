@@ -146,6 +146,7 @@ h1 span {
 .extension {
   background-color: var(--Aktif);
   padding: 15px 0;
+  flex-wrap: wrap;
   text-align: center;
 }
 .file {
@@ -155,72 +156,48 @@ h1 span {
   margin: 10px 20px;
   padding-bottom: 30px;
 }
-/* Card Section */
-.myCard {
-  padding: 15px 0;
-  margin-bottom: 40px;
+/* myCard section */
+#lembar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
+.card {
+  margin: 19px 0;
+  width: 31%;
+}
+.card img {
+  width: 100%;
+}
+
+.card .label a {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--White);
+  font-family: Medium;
+  line-height: 0;
+  font-size: 13px;
+}
+.label h3 {
+  margin-right: 10px;
+}
+.card .label a:hover {
+  color: var(--Biru);
+}
+.card .label p {
+  font-family: Light;
+  font-size: 13px;
+  line-height: 0.1;
+  color: var(--Gray);
+}
+/* Video Section */
 .tittle {
   width: 100%;
   text-align: center;
   padding-bottom: 10px;
   font-family: Thin;
-}
-.lembar {
-  display: grid;
-  padding: 0 2em;
-  grid-template-columns: 440px auto;
-}
-.bam {
-  background-color: var(--Red);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-#card {
-  width: 411px;
-  text-align: center;
-  background: var(--Biru);
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-.profile {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--White);
-}
-.profile h4 {
-  font-family: Thin;
-  font-weight: 300;
-  font-size: 36px;
-  text-align: left;
-  line-height: 35px;
-}
-.profile h4 span {
-  font-family: Medium;
-}
-.profile img {
-  height: 99px;
-  border-radius: 100%;
-  border: 7px solid var(--Button-Blur);
-}
-#card p {
-  font-family: thin;
-  font-size: 29px;
-  line-height: 30px;
-  color: var(--White);
-}
-.tBawah {
-  display: flex;
-  align-items: flex-end;
-  padding-bottom: 30px;
-}
-.tBawah img {
-  height: 130px;
-  padding-left: 40px;
-}
-.daftar a i {
-  font-size: 25px;
 }
 .video {
   background-color: var(--Passive);

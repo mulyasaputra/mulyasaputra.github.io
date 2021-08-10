@@ -75,6 +75,13 @@
       padding-bottom: 30px; */
     width: 50px !important;
   }
+  /* myCard section */
+  #lembar {
+    margin-bottom: 40px;
+  }
+  .card {
+    width: 90%;
+  }
 }
 @media (max-width: 414px) {
   .hiden5,
@@ -184,24 +191,6 @@
     width: 70px !important;
     margin: 10px !important;
   }
-  /* Card section */
-  .myCard {
-    padding: 0;
-    margin-bottom: 30px;
-  }
-  .lembar {
-    padding: 0 1em;
-    grid-template-columns: auto !important;
-  }
-  #card {
-    display: none;
-  }
-  .bam {
-    background-color: #dc354600;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-    border-radius: 0;
-    width: 100%;
-  }
   /* Testimonial section */
   .view {
     width: 90%;
@@ -221,6 +210,10 @@
   /* Contact sestion */
   .contents .inti #inText {
     height: 170px;
+  }
+  /* myCard section */
+  .card .label a {
+    font-size: 10px;
   }
 }
 @media (max-width: 1170px) {
@@ -250,36 +243,6 @@
   }
   .file .hiden7 {
     display: none;
-  }
-  /* card section */
-  .lembar {
-    padding: 0 1em;
-    grid-template-columns: 390px auto;
-  }
-  #card {
-    width: 370px;
-    text-align: center;
-  }
-  .profile h4 {
-    font-size: 28px;
-    line-height: 1;
-  }
-  .profile img {
-    height: 99px;
-  }
-  #card p {
-    font-family: thin;
-    font-size: 20px;
-    line-height: 1.4;
-    color: #ece5f7;
-  }
-  .tBawah img {
-    height: 100px;
-    padding-left: 10px;
-    margin-top: 70px;
-  }
-  .daftar a i {
-    font-size: 20px;
   }
   /* Video sectio */
   .video {
