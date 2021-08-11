@@ -1,3 +1,51 @@
+/* Navbar section */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  letter-spacing: 2px;
+  width: 100%;
+  background: var(--Blur);
+  backdrop-filter: blur(100px);
+  padding: 10px 0;
+  z-index: 999;
+}
+.logo {
+  font-family: Medium;
+  font-size: 25px;
+  line-height: 33px;
+  color: vaR(--Red);
+  padding-left: 30px;
+}
+.logo span {
+  color: var(--White);
+}
+
+.daftar {
+  display: flex;
+  align-items: center;
+  color: var(--White);
+  margin: auto;
+  padding-right: 30px;
+}
+.daftar a {
+  font-family: Thin;
+  color: var(--White);
+  text-decoration: none;
+  margin: 0 10px;
+}
+.daftar button {
+  letter-spacing: 1.5px;
+  font-family: Medium;
+  color: var(--Dark);
+  margin-left: 15px;
+  width: 89px;
+  height: 30px;
+  border-radius: 51px;
+  border: 0;
+}
+
 .menu-btn {
   color: #fff;
   font-size: 23px;
