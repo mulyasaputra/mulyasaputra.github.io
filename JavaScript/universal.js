@@ -23,6 +23,26 @@ $(document).ready(function () {
   });
 });
 
+// Navbar onClock
 $(".logo").on("click", function () {
   window.open("https://mulyasaputra.github.io", "_self");
+});
+
+// Navbar onClck Link
+$("#Welcome").on("click", function () {
+  window.open("https://mulyasaputra.github.io", "_self");
+});
+$("#Download").on("click", function () {
+  window.open("Download", "_self");
+});
+$("#License").on("click", function () {
+  window.open("License", "_self");
+});
+$("#Blog").on("click", function () {
+  alert(
+    "Untuk saat ini halaman blog belum bisa di akses oleh semua orang termasuk saya"
+  );
+});
+$(".daftar button").on("click", function () {
+  alert("click button suport");
 });
