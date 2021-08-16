@@ -22,3 +22,7 @@ $(document).ready(function () {
     $(".menu-btn i").toggleClass("active");
   });
 });
+
+$(".logo").on("click", function () {
+  window.open("https://mulyasaputra.github.io", "_self");
+});

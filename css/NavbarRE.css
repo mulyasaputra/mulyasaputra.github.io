@@ -18,6 +18,9 @@
   color: vaR(--Red);
   padding-left: 30px;
 }
+.logo:hover {
+  cursor: pointer;
+}
 .logo span {
   color: var(--White);
 }
