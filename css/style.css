@@ -78,6 +78,18 @@ h1 span {
   padding-bottom: 30px;
 }
 /* myCard section */
+.cTNGambar{
+  position: relative;
+}
+.TLable{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.315);
+  padding: 2px 40px 6px 20px;
+  top: 0;
+  color: var(--White);
+  border-bottom-right-radius:50px;
+  font-family: Light;
+}
 #lembar {
   display: flex;
   flex-wrap: wrap;

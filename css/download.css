@@ -1,0 +1,102 @@
+body {
+  background: var(--Dark);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+#body {
+  padding-top: 110px;
+  margin: 0 40px;
+}
+
+/* Profile section */
+#profile {
+  justify-content: center;
+  display: flex;
+}
+#profile img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 255, 0, 1) 19%,
+    rgba(0, 255, 0, 1) 38%,
+    rgba(0, 255, 255, 1) 51%,
+    rgba(0, 0, 255, 1) 67%,
+    rgba(255, 0, 255, 1) 83%,
+    rgba(255, 0, 0, 1) 99%
+  );
+}
+.nama {
+  margin-left: 40px;
+  font-family: Light;
+  color: var(--Clear);
+}
+.nama h1 {
+  font-size: 32px;
+  line-height: 38px;
+  text-align: start;
+  letter-spacing: 4px;
+}
+.nama p {
+  letter-spacing: 1.3px;
+  line-height: 40px;
+  font-size: 15px;
+}
+.nama .btn1 {
+  padding: 8px 26px;
+}
+.nama .fas {
+  width: 40px;
+  padding: auto;
+}
+.nama button {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--White);
+  height: 40px;
+  margin-top: 15px;
+  background-color: var(--Dark);
+  border: 2px solid var(--Gray);
+  border-radius: 7px;
+  margin-right: 12px;
+}
+
+/* Option Section */
+#option {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid red;
+}
+/* Content section */
+#isiPostingan {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* myCard section */
+.cTNGambar {
+  position: relative;
+}
+.TLable {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.315);
+  padding: 2px 40px 6px 20px;
+  top: 0;
+  color: var(--White);
+  border-bottom-right-radius: 50px;
+  font-family: Light;
+}
+.card {
+  margin: 19px 0;
+  width: 31%;
+}
+.card img {
+  width: 100%;
+}

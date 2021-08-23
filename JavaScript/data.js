@@ -3,11 +3,13 @@ $.getJSON("Json/Thumbnail.json", function (data) {
   let design = data.design;
   $.each(design, function (i, data) {
     $("#lembar").append(
-      '<div class="card"><img src="' +
+      '<div class="card"><div class="cTNGambar"><img class="img" src="' +
         data.gambar +
         '" alt="' +
         data.alt +
-        '" /><div class="label"><a target="_blank" href="' +
+        '" /><div class="TLable">' +
+        data.info +
+        '</div></div><div class="label"><a target="_blank" href="' +
         data.link +
         '"><h3>' +
         data.nama +
