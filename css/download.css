@@ -1,5 +1,6 @@
 body {
   background: var(--Dark);
+  height: 900px;
 }
 * {
   margin: 0;
@@ -68,10 +69,90 @@ body {
 
 /* Option Section */
 #option {
+  position: relative;
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
-  border-bottom: 3px solid red;
+}
+#option::after {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  border-bottom: 1px solid #888192;
+  bottom: -10px;
+}
+.link a {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: Medium;
+  margin-right: 20px;
+  color: #6e6d7a;
+}
+.link a:hover {
+  color: var(--Clear);
+}
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  border: 1px solid #6e6d7a;
+  border-radius: 7px;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: var(--Blur);
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #fdfdfd;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.63);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: rgba(39, 130, 250, 0.486);
 }
 /* Content section */
 #isiPostingan {
