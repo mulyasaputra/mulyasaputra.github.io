@@ -70,32 +70,23 @@
       <div id="isiPostingan">
         <div class="card">
           <div class="cTNGambar">
-            <img
-              class="img"
-              src="https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&amp;resize=1200x900"
-              alt="Project FoxDB"
-            />
+            <a href="#">
+              <img
+                class="img"
+                src="https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&amp;resize=1200x900"
+                alt="Project FoxDB"
+            /></a>
             <div class="TLable">Web Design</div>
           </div>
-        </div>
-        <div class="card">
-          <div class="cTNGambar">
-            <img
-              class="img"
-              src="https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&amp;resize=1200x900"
-              alt="Project FoxDB"
-            />
-            <div class="TLable">Web Design</div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="cTNGambar">
-            <img
-              class="img"
-              src="https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&amp;resize=1200x900"
-              alt="Project FoxDB"
-            />
-            <div class="TLable">Web Design</div>
+          <div class="iconDekorasi">
+            <div class="kiri">
+              <a class="fas fa-share" href="#"><span> FoxDB Design</span></a>
+            </div>
+            <div class="kanan">
+              <i class="far fa-comment"><span> 0</span></i>
+              <i class="far fa-heart"><span> 28</span></i>
+              <i class="far fa-eye"><span> 29k</span></i>
+            </div>
           </div>
         </div>
       </div>
@@ -188,6 +179,33 @@
       /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
       document.addEventListener("click", closeAllSelect);
+    </script>
+    <script>
+      //  Script for Data
+      $.getJSON("Json/Thumbnail.json", function (data) {
+        let postdata = data.postdata;
+        $.each(postdata, function (i, data) {
+          $("#isiPostingan").append(
+            '<div class="card"><div class="cTNGambar"><a href="#"><img class="img" src="' +
+              data.url +
+              '"alt="' +
+              data.nama +
+              '"/></a><div class="TLable">' +
+              data.label +
+              '</div></div><div class="iconDekorasi"><div class="kiri"><a class="fas fa-share" href=" ' +
+              data.link +
+              '"><span>  ' +
+              data.sumber +
+              '</span></a></div><div class="kanan"><i class="far fa-comment"><span> ' +
+              data.comment +
+              ' </span></i><i class="far fa-heart"><span> ' +
+              data.love +
+              ' </span></i><i class="far fa-eye"><span> ' +
+              data.view +
+              " </span></i></div></div></div>"
+          );
+        });
+      });
     </script>
   </body>
 </html>

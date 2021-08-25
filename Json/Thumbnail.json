@@ -24,5 +24,29 @@
       "gambar": "https://cdn.dribbble.com/users/7368765/screenshots/15793727/media/93bd9e814b2c56fbcc7f0af6b99067b1.png?compress=1&resize=1200x900",
       "paraf": "Baru"
     }
+  ],
+  "postdata": [
+    {
+      "alt": "Project FoxDB",
+      "nama": "FoxDB",
+      "label": "UI Design",
+      "link": "UI Design",
+      "url": "https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&resize=1200x900",
+      "sumber": "Dribble",
+      "comment": "0",
+      "love": "37",
+      "view": "28k"
+    },
+    {
+      "alt": "Project Appventory",
+      "nama": "Appventory",
+      "label": "Web Design",
+      "link": "UI Design",
+      "url": "https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&resize=1200x900",
+      "sumber": "Instagram",
+      "comment": "0",
+      "love": "37",
+      "view": "28k"
+    }
   ]
 }

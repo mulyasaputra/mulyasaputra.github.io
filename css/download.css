@@ -4,21 +4,20 @@ body {
 }
 * {
   margin: 0;
-  padding: 0;
 }
 #body {
   padding-top: 110px;
   margin: 0 40px;
 }
-
 /* Profile section */
 #profile {
   justify-content: center;
   display: flex;
+  align-items: center;
 }
 #profile img {
-  height: 140px;
-  width: 140px;
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
   padding: 3px;
   background: -webkit-linear-gradient(
@@ -38,14 +37,14 @@ body {
   color: var(--Clear);
 }
 .nama h1 {
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 28px;
+  line-height: 30px;
   text-align: start;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 .nama p {
-  letter-spacing: 1.3px;
-  line-height: 40px;
+  letter-spacing: 1px;
+  line-height: 36px;
   font-size: 15px;
 }
 .nama .btn1 {
@@ -59,7 +58,7 @@ body {
   font-size: 14px;
   letter-spacing: 3px;
   color: var(--White);
-  height: 40px;
+  height: 36px;
   margin-top: 15px;
   background-color: var(--Dark);
   border: 2px solid var(--Gray);
@@ -70,7 +69,7 @@ body {
 /* Option Section */
 #option {
   position: relative;
-  margin-top: 60px;
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
 }
@@ -177,7 +176,108 @@ body {
 .card {
   margin: 19px 0;
   width: 31%;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
 }
 .card img {
   width: 100%;
+  border-radius: 6px;
+}
+.iconDekorasi {
+  font-size: 14px;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--Clear);
+}
+.iconDekorasi .kanan i {
+  margin-right: 5px;
+}
+.iconDekorasi i span,
+.iconDekorasi a span {
+  font-family: Light;
+  letter-spacing: 1px;
+}
+.iconDekorasi a {
+  color: var(--Clear);
+  text-decoration: none;
+}
+
+@media (max-width: 965px) {
+  #body {
+    margin: 0 25px;
+  }
+  /* Option Section */
+  #option {
+    display: block;
+  }
+  #option::after {
+    bottom: 60%;
+  }
+  /* The container must be positioned relative: */
+  .custom-select {
+    margin-top: 50px;
+  }
+  /* myCard section */
+  .card {
+    width: 48%;
+    border-radius: 10px;
+  }
+  .card img {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 768px) {
+  #profile {
+    display: inline;
+  }
+  #profile img {
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+  }
+  .nama {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+  .nama h1 {
+    font-size: 24px;
+  }
+  .nama p {
+    line-height: 40px;
+    font-size: 12px;
+  }
+  .nama .btn1 {
+    padding: 0 20px;
+  }
+  .nama button {
+    letter-spacing: 2px;
+    height: 34px;
+    margin-top: 10px;
+    border: 1px solid var(--Gray);
+    margin-right: 9px;
+  }
+  #option {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 628px) {
+  .link a {
+    display: inline-block;
+  }
+  .custom-select {
+    width: 140px !important;
+  }
+  .select-items div,
+  .select-selected {
+    border: 0;
+  }
+  /* myCard section */
+  .card {
+    width: 100%;
+    border-radius: 6px;
+  }
+  .card img {
+    border-radius: 6px;
+  }
 }
