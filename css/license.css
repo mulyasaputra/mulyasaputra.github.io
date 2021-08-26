@@ -1,101 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 
 body {
-  background: var(--Dark);
   font-family: "Montserrat", sans-serif;
   color: var(--Clear);
 }
-#content {
-  padding-top: 90px;
-  display: grid;
-  grid-column-gap: 70px;
-  grid-template-columns: 200px auto;
-}
-
-/* slidebar section */
-.slidebar {
-  margin-left: 20px;
-}
-.slidebar header {
-  font-size: 29px;
-  font-weight: 600;
-}
-.slidebar ul {
-  list-style: none;
-  padding: 0;
-  line-height: 2.3;
-  text-align: justify;
-}
-.slidebar ul li:hover {
-  cursor: pointer;
-  color: var(--Black);
-}
-
-/* Mainbar section */
-
-.mainbar header {
-  font-size: 25px;
-  font-weight: 500;
-}
-.mainbar {
-  margin: 0 20px 0 0;
-}
-.kotak {
-  -moz-border-box: 10px;
-  -webkit-border-box: 10px;
-  background: var(--Blur);
-  backdrop-filter: blur(100px);
-  border-left: 5px solid var(--White);
-  padding: 18px;
-  t-align: left;
-  color: var(--Clear);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  border-radius: 0 5px 5px 0;
-}
-.kotak span a {
-  text-decoration: none;
-  color: var(--Clear);
-}
-.kotak span a:hover {
-  text-decoration: underline;
-  color: var(--Black);
-}
-
-/* Sudo Command */
-.hilang {
-  display: none;
-}
-.Tambah {
-  text-decoration: underline;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* ResponsiveRE */
-@media (max-width: 663px) {
-  #content {
-    display: inline;
-  }
-  .slidebar header,
-  .mainbar header {
-    font-size: 21px;
-    font-weight: 700;
-  }
-  .slidebar {
-    padding-top: 90px;
-  }
-  .mainbar {
-    margin: 90px 20px 0 20px;
-  }
-}
-
-@media (min-width: 747px) and (min-height: 700px){
-  /* Background color */
+/* Background color */
 body::before {
   /* background-image: linear-gradient(to left, #03a9f4, #0043d4); */
-  z-index: -99;
-  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  display: block;
+  position: fixed;
   content: " ";
   width: 100%;
   height: 100%;
@@ -147,5 +63,89 @@ body::before {
     background-position: 0% 100%;
   }
 }
+#content {
+  padding-top: 90px;
+  display: grid;
+  grid-column-gap: 70px;
+  grid-template-columns: 200px auto;
 }
 
+/* slidebar section */
+.slidebar {
+  margin-left: 20px;
+}
+.slidebar header {
+  font-size: 29px;
+  font-weight: 600;
+}
+.slidebar ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2.3;
+  text-align: justify;
+}
+.slidebar ul li:hover {
+  cursor: pointer;
+  color: var(--Black);
+}
+
+/* Mainbar section */
+
+.mainbar header {
+  font-size: 25px;
+  font-weight: 500;
+}
+.mainbar {
+  margin: 0 20px 0 0;
+}
+.kotak {
+  background: var(--Blur);
+  border-left: 5px solid var(--White);
+  padding: 18px;
+  text-align: left;
+  color: var(--Clear);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  border-radius: 0 5px 5px 0;
+}
+.kotak span a {
+  text-decoration: none;
+  color: var(--Clear);
+}
+.kotak span a:hover {
+  text-decoration: underline;
+  color: var(--Black);
+}
+.tips {
+  margin-bottom: 50px;
+}
+/* Sudo Command */
+.hilang {
+  display: none;
+}
+.Tambah {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ResponsiveRE */
+@media (max-width: 663px) {
+  #content {
+    display: inline;
+  }
+  .slidebar header,
+  .mainbar header {
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .slidebar {
+    padding-top: 90px;
+  }
+  .mainbar {
+    margin: 90px 20px 0 20px;
+  }
+}
+
+/* @media (min-width: 747px) and (min-height: 700px) {
+} */

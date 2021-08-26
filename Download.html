@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="css/download.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body
+    oncontextmenu="return false"
+    onselectstart="return false"
+    ondragstart="return false"
+  >
     <nav class="navbar">
       <div class="logo">In<span>Sketch</span></div>
       <div class="menu">
@@ -44,11 +48,11 @@
       </div>
       <div id="option">
         <div class="link">
-          <a href="#">Shots</a>
-          <a href="#">Boosted Shots</a>
-          <a href="#">Collections</a>
-          <a href="#">Liked Shots</a>
-          <a href="#">About</a>
+          <a class="Shots">Shots</a>
+          <a class="Visite">Visite</a>
+          <a class="Collections">Collections</a>
+          <a class="Liked">Liked</a>
+          <a class="About">About</a>
         </div>
         <div class="custom-select" style="width: 200px">
           <select>
@@ -71,6 +75,7 @@
         <div class="card">
           <div class="cTNGambar">
             <a href="#">
+              <div class="blok far fa-eye"></div>
               <img
                 class="img"
                 src="https://cdn.dribbble.com/users/7368765/screenshots/15875031/media/8a73dfe09375f1913a693076f4fd8e4b.png?compress=1&amp;resize=1200x900"
@@ -186,13 +191,15 @@ then close all select boxes: */
         let postdata = data.postdata;
         $.each(postdata, function (i, data) {
           $("#isiPostingan").append(
-            '<div class="card"><div class="cTNGambar"><a href="#"><img class="img" src="' +
-              data.url +
+            '<div class="card"><div class="cTNGambar"><a href="' +
+              data.urlGambar +
+              '"><div class="blok far fa-eye"></div><img class="img" src="' +
+              data.gambar +
               '"alt="' +
-              data.nama +
+              data.alt +
               '"/></a><div class="TLable">' +
               data.label +
-              '</div></div><div class="iconDekorasi"><div class="kiri"><a class="fas fa-share" href=" ' +
+              '</div></div><div class="iconDekorasi"><div class="kiri"><a class="fas fa-share" target="_blank" href=" ' +
               data.link +
               '"><span>  ' +
               data.sumber +
@@ -205,6 +212,31 @@ then close all select boxes: */
               " </span></i></div></div></div>"
           );
         });
+      });
+    </script>
+    <script>
+      // Click Option
+      $(".fas").on("click", function () {
+        window.open("https://mulyasaputra.github.io/visite/", "_blank");
+      });
+      $(".btn1").on("click", function () {
+        alert("click button Suport");
+      });
+      $(".Shots").on("click", function () {
+        // window.open("https://mulyasaputra.github.io", "_self");
+        alert("click button Shots");
+      });
+      $(".Visite").on("click", function () {
+        alert("click button Visite");
+      });
+      $(".Collections").on("click", function () {
+        alert("click button Collections");
+      });
+      $(".Liked").on("click", function () {
+        alert("click button Liked");
+      });
+      $(".About").on("click", function () {
+        alert("click button About");
       });
     </script>
   </body>

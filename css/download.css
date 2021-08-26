@@ -6,6 +6,7 @@ body {
   margin: 0;
 }
 #body {
+  cursor: default;
   padding-top: 110px;
   margin: 0 40px;
 }
@@ -87,6 +88,9 @@ body {
   margin-right: 20px;
   color: #6e6d7a;
 }
+.link:hover {
+  cursor: pointer;
+}
 .link a:hover {
   color: var(--Clear);
 }
@@ -161,11 +165,9 @@ body {
   justify-content: space-between;
 }
 /* myCard section */
-.cTNGambar {
-  position: relative;
-}
 .TLable {
   position: absolute;
+  z-index: 99;
   background: rgba(0, 0, 0, 0.315);
   padding: 2px 40px 6px 20px;
   top: 0;
@@ -175,13 +177,54 @@ body {
 }
 .card {
   margin: 19px 0;
+  position: relative;
   width: 31%;
   border-radius: 6px 6px 0 0;
   overflow: hidden;
 }
-.card img {
+/* Gambar */
+.blok {
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: var(--Blur);
+  backdrop-filter: blur(3px);
+  -webkit-transition: all 1s ease; /* Safari and Chrome */
+  -moz-transition: all 1s ease; /* Firefox */
+  -ms-transition: all 1s ease; /* IE 9 */
+  -o-transition: all 1s ease; /* Opera */
+  transition: all 1s ease;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(0, 0, 0, 0.753);
+  font-size: 70px;
+}
+.cTNGambar {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+img {
   width: 100%;
   border-radius: 6px;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;
+}
+.cTNGambar:hover .blok {
+  opacity: 1;
+}
+.cTNGambar:hover img {
+  -webkit-transform: scale(1.1); /* Safari and Chrome */
+  -moz-transform: scale(1.1); /* Firefox */
+  -ms-transform: scale(1.1); /* IE 9 */
+  -o-transform: scale(1.1); /* Opera */
+  transform: scale(1.1);
 }
 .iconDekorasi {
   font-size: 14px;
@@ -279,5 +322,13 @@ body {
   }
   .card img {
     border-radius: 6px;
+  }
+  .blok {
+    font-size: 50px;
+  }
+}
+@media (max-width: 292px) {
+  .blok {
+    font-size: 30px;
   }
 }
