@@ -236,6 +236,16 @@ h1 span {
   text-decoration: none;
   color: white;
 }
+
+#videostory {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 100vh;
+  background: var(--Blur);
+  backdrop-filter: blur(2px);
+}
 /* Testimonials */
 .Testimonials .box-container {
   font-family: Medium;

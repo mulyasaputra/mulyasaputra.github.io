@@ -171,6 +171,11 @@
     width: 70px !important;
     margin: 10px !important;
   }
+
+  /* Video Section */
+  .play {
+    display: none;
+  }
   /* Testimonial section */
 
   /* Contact sestion */
