@@ -1,0 +1,235 @@
+@media (max-width: 376px) {
+  .Contact {
+    background: #4b4d55;
+    padding: 2px 0 40px 0;
+  }
+  .contents {
+    display: grid;
+    place-items: center;
+  }
+  .akun {
+    margin-top: 40px;
+  }
+  /* Video section */
+  .play img {
+    height: 40px;
+  }
+}
+@media (max-width: 401px) {
+  /* FileSectuon */
+  .extension {
+    padding: 10px 0;
+  }
+  .extension .file img {
+    width: 50px !important;
+  }
+  /* Video Section */
+  #embed {
+    row-gap: 23px;
+    grid-template-columns: 1fr;
+  }
+  /* myCard section */
+}
+@media (max-width: 414px) {
+  /* herosection section */
+  .herosection {
+    height: 90vh;
+  }
+  .desk {
+    letter-spacing: 1px;
+    font-size: 16px;
+    padding-right: 0;
+  }
+  .tulisan {
+    text-align: center;
+  }
+  .text2 {
+    font-size: 10px;
+  }
+  .conten1 {
+    display: grid;
+    place-items: center;
+    margin: 0;
+  }
+  .conten1 .view img {
+    display: none;
+  }
+  .conten1 .view .review p {
+    font-size: 17px !important;
+  }
+  .view {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .review {
+    text-align: center;
+  }
+  .conten1 .view .review h5 {
+    margin-top: 50px;
+    font-size: 16px !important;
+  }
+  .conten1 .view .review span {
+    font-size: 12px !important;
+  }
+  /* File Extension Section */
+  .hiden5,
+  .hiden6 {
+    display: none;
+  }
+  .file img {
+    width: 60px;
+    margin: 0px;
+  }
+  /* Project Section */
+  #lembar .box-project {
+    min-width: 100%;
+  }
+  /* Contact Section */
+  .end1 {
+    display: none;
+  }
+  /* Copyright Section */
+  #cc {
+    font-family: Light;
+    font-size: 12px;
+  }
+  .logoIcon a {
+    display: none;
+  }
+  /* Video Section */
+  .play img {
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 582px) and (min-width: 414px) {
+  .view .review p {
+    font-size: 30%;
+  }
+  /* Video section */
+  .play img {
+    height: 60px;
+  }
+}
+@media (max-width: 663px) {
+  /* herosection section */
+  .herosection {
+    padding: 0 20px;
+    padding-top: 60px;
+    height: 500px;
+  }
+  .Welcome {
+    flex-direction: column;
+  }
+  .Welcome img {
+    display: none;
+  }
+  h1 {
+    font-family: Medium;
+    font-weight: bold;
+    color: #dc3545;
+  }
+  h1 span {
+    color: #ece5f6;
+  }
+  .desk {
+    width: 100%;
+  }
+  .tulisan button {
+    font-family: thin;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 1);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 145px;
+    height: 42px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .tulisan button:hover {
+    background: rgba(240, 248, 255, 0.2);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+  }
+  .text2 {
+    letter-spacing: 1px;
+    font-family: Thin;
+    color: #888192;
+  }
+  /* extension section */
+  .file {
+    margin: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .file img {
+    width: 70px !important;
+    margin: 10px !important;
+  }
+  /* Testimonial section */
+
+  /* Contact sestion */
+  .contents .inti #inText {
+    height: 170px;
+  }
+  /* myCard section */
+  .card .label a {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1170px) {
+  /* herosection section */
+  .herosection {
+    background: #1e1d1f;
+    height: 550px;
+    padding-top: 90px;
+  }
+  .Welcome img {
+    width: 270px;
+  }
+  .herosection {
+    align-items: flex-start;
+  }
+  .Welcome {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .desk {
+    width: 100%;
+  }
+  /* extenson section */
+  .file {
+    margin: 7px 10px;
+    padding-bottom: 20px;
+  }
+  .file .hiden7 {
+    display: none;
+  }
+  /* Testimonial section */
+}
+@media (max-width: 700px) {
+  .Testimonials .box-container .box {
+    min-width: 100% !important;
+  }
+}
+@media (max-width: 1096px) {
+  .Testimonials .box-container .box {
+    min-width: calc(50% - 8px);
+  }
+}
+@media (min-width: 1368px) {
+  /* Review Section */
+  .Testimonials .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .Testimonials .box-container .box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,232 @@
+* {
+  font-family: Medium;
+}
+.navbar {
+  background: var(--Dark) !important;
+}
+body {
+  position: relative;
+}
+.overbase {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.contain {
+  padding-top: 52px;
+  width: 100%;
+}
+.contain .heroimages {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+/* imges section */
+.heroimages img {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+}
+/* Post section */
+.contain #postContaint {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+#postContaint .download {
+  height: 310px;
+  display: flex;
+  justify-content: center;
+}
+#postContaint .download .box {
+  background: #ececec;
+  width: 90%;
+  margin-top: 25px;
+  padding: 30px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.download .box .atas h1 {
+  margin: 0 0 10px;
+}
+.download .box .tag {
+  margin: 0 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.download .box .tag .tagar {
+  padding: 3px 10px;
+  border-radius: 50px;
+  background: rgb(185, 185, 185);
+  width: fit-content;
+  font-size: 10px;
+  margin: 5px 5px 5px 0;
+}
+.download .box .tag .tagar img {
+  width: 7px;
+}
+.download .box .button {
+  display: flex;
+  align-items: center;
+}
+.download .box .button .dwn {
+  padding: 10px 50px;
+  color: var(--Clear);
+  border-radius: 2px;
+  background: var(--Dark);
+  margin-right: 30px;
+}
+.download .box .button div {
+  font-size: 26px;
+}
+#postContaint #container {
+  margin: 0 20px;
+}
+#postContaint .title .create {
+  display: flex;
+  align-items: center;
+}
+#postContaint .title .create img {
+  width: 40px;
+  margin-right: 20px;
+}
+#container :where(.pagesImg, .about) {
+  margin-top: 40px;
+}
+#container .pagesImg .gallery {
+  width: 100%;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#container .about h2 {
+  margin-bottom: 8px;
+}
+#container .pagesImg .gallery img {
+  width: 100%;
+}
+
+/* Responsiv Design */
+@media (min-width: 1673px) {
+  #postBlog {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #postContaint {
+    background: var(--Blur);
+    backdrop-filter: blur(1px);
+    -moz-backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    -o-backdrop-filter: blur(1px);
+    width: 90%;
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1478px) {
+  .contain .heroimages {
+    width: 100%;
+    height: 800px !important;
+    overflow: hidden;
+    position: relative;
+  }
+}
+@media (max-width: 797px) {
+  .contain #postContaint {
+    display: inline;
+  }
+  #postContaint .download {
+    height: auto;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #postContaint .download .box {
+    flex-direction: row;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1273px) {
+  .contain .heroimages {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+    position: relative;
+  }
+  .heroimages img {
+    bottom: -100px;
+    width: 100%;
+  }
+  #container .pagesImg .gallery {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 505px) {
+  .contain #postContaint {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+  #postContaint .download .box {
+    flex-direction: column;
+    gap: 30px;
+  }
+  #postContaint .download:nth-of-type(1) {
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+
+  #postContaint #container:nth-of-type(2) {
+    grid-row: 1;
+  }
+  #postContaint #container .title h2 {
+    font-size: 1rem;
+  }
+  #postContaint #container .title span {
+    font-size: 0.8rem;
+  }
+  .contain .heroimages {
+    width: 100%;
+    height: 200px;
+  }
+  #container .pagesImg .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 340px) {
+  .contain .heroimages {
+    width: 100%;
+    height: 200px;
+  }
+  #container .pagesImg .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #postContaint #container .title h2 {
+    font-size: 19px;
+  }
+  #postContaint #container .title .create {
+    font-size: 19px;
+  }
+}
+@media (max-width: 300px) {
+  #postContaint #container {
+    margin: 0 10px;
+  }
+  .contain .heroimages {
+    height: 150px;
+  }
+  #postContaint #container .title h2 {
+    font-size: 15px;
+  }
+  #postContaint #container .title .create {
+    display: none;
+  }
+  #container .pagesImg .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Light;
+  src: url(../font/HelveticaNeue-Light.woff);
+}
+@font-face {
+  font-family: Medium;
+  src: url(../font/HelveticaNeue-Medium.woff);
+}
+@font-face {
+  font-family: Thin;
+  src: url(../font/HelveticaNeue-Thin.woff);
+}
+
+:root {
+  --Red: #dc3545;
+  --Biru: #2c91fb;
+  --Gray: #888192;
+  --Dark: #22222a;
+  --Aktif: #4b4d55;
+  --color: #1d1d1f;
+  --White: #ece5f6;
+  --Clear: #ffffff;
+  --Black: #111111;
+  --Footer: #acacac;
+  --Passive: #888192;
+  --Non-Aktif: #1d1d1f;
+  --Blur: rgba(0, 0, 0, 0.11);
+  --Button-Blur: rgba(240, 248, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #888192;
+}
+::-webkit-scrollbar-thumb {
+  background: #625d69;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #bb0000,
+    #d50066,
+    #bd53b8,
+    #7b86ea,
+    #00aaf4
+  );
+}
