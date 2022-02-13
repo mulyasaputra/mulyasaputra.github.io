@@ -95,6 +95,21 @@ h1 span {
   display: flex;
   overflow-x: auto;
   border-radius: 10px;
+  scrollbar-width: none;
+}
+#lembar:hover,
+#lembar:hover .box-project .box-overvlow,
+.Testimonials .box-container:hover {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+#lembar:active,
+#lembar:active .box-project .box-overvlow,
+.Testimonials .box-container:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
 }
 #lembar .box-project {
   min-width: 373px;
@@ -121,7 +136,6 @@ h1 span {
 }
 #lembar .box-project .box-overvlow:hover {
   background: rgba(12, 12, 12, 0.3);
-  cursor: pointer;
 }
 .box-overvlow {
   display: flex;
@@ -247,6 +261,9 @@ h1 span {
   backdrop-filter: blur(2px);
 }
 /* Testimonials */
+.Testimonials .tittle h4 span {
+  color: var(--Red);
+}
 .Testimonials .box-container {
   font-family: Medium;
   /* display: grid; */
@@ -258,6 +275,7 @@ h1 span {
   display: flex;
   overflow-x: auto;
   margin: 0 20px 2rem;
+  scrollbar-width: none;
 }
 .Testimonials .box-container::-webkit-scrollbar {
   height: 0;

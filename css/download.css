@@ -382,6 +382,14 @@ img {
     margin-top: 40px;
   }
 }
+@media only screen and (max-width: 834px) and (min-width: 547px) {
+  #about .box-media-sosial {
+    display: block !important;
+  }
+  #about .box-media-sosial .bax-media {
+    display: none !important;
+  }
+}
 
 /*  Hilang function */
 .sembunyi {
