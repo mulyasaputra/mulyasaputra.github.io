@@ -15,7 +15,7 @@ function tampilSemuaData() {
           <div class="cTNGambar">
             <a href="${data.urlGambar}" class="fancybox" data-fancybox="gallery1">
               <div class="blok far fa-eye"></div>
-              <img class="img" src="${data.gambar}"alt="${data.alt}"/>
+              <img class="img" src="${data.urlGambar}"alt="${data.alt}"/>
             </a>
             <div class="TLable">${data.label}</div>
           </div>
