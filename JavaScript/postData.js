@@ -57,7 +57,7 @@ $(".custom-select").on("click", function () {
           '<div class="card"><div class="cTNGambar"><a href="' +
           data.urlGambar +
           '" class="fancybox" data-fancybox="gallery2"><div class="blok far fa-eye"></div><img class="img" src="' +
-          data.gambar +
+          data.urlGambar +
           '"alt="' +
           data.alt +
           '"/></a><div class="TLable">' +
