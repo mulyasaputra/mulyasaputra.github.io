@@ -369,6 +369,168 @@ img.mfp-img {
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer;
 }
+/* ModalBox Suport Section */
+#modalBox {
+  display: none;
+  background: var(--Blur);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 1px;
+  z-index: 1;
+  place-items: center;
+}
+.suportpasif .container-modalbox img {
+  width: 70px;
+  margin: 20px 0 10px;
+}
+.container-modalbox .selesai {
+  padding: 8px 30px;
+  border-radius: 50px;
+  border-width: 0;
+  background-color: #53dc14;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  margin: 20px 0 10px;
+}
+.container-modalbox :where(img, p, button) {
+  z-index: 2;
+}
+.container-modalbox {
+  background-color: aliceblue;
+  border-radius: 10px;
+  color: #53dc14;
+  display: grid;
+  place-items: center;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+}
+.container-modalbox::after {
+  content: " ";
+  position: absolute;
+  background-color: aliceblue;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  border-radius: 10px;
+  z-index: 1;
+}
+.container-modalbox::before {
+  content: " ";
+  position: absolute;
+  width: 32rem;
+  height: 10rem;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(3, 0, 255, 1) 100%);
+  z-index: 0;
+  animation: rotate 2s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 385px) {
+  .container-modalbox {
+    padding: 10px 40px;
+  }
+  .suportpasif .container-modalbox img {
+    width: 70px;
+    margin: 20px 0 40px;
+  }
+}
+
+.frizee {
+  overflow: hidden;
+}
+
+/* ModalBox Suport Section Easteregg */
+#modalBoxEasteregg {
+  display: none;
+  place-items: center;
+  background: var(--Blur);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 1px;
+  z-index: 96;
+  text-align: center;
+}
+.suportactive .exit {
+  position: fixed;
+  z-index: 1;
+  font-size: 1.4rem;
+  right: 38px;
+  bottom: 80px;
+}
+.suportactive .mobile {
+  display: none !important;
+}
+.suportactive .desktop {
+  display: grid;
+  grid-template-columns: 30rem 2fr;
+  place-items: center;
+  max-width: 1426px;
+  width: calc(100vw - 40px);
+}
+.suportactive .desktop .qrCode {
+  background-color: #04aa6d;
+  height: 30rem;
+  padding: 20px 20px 0;
+  border-radius: 20px;
+}
+.suportactive .desktop .qrCode img {
+  width: 20rem;
+  border-radius: 10px;
+}
+.suportactive .desktop .qrCode h3 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  line-height: 1px;
+  color: #ff0075;
+}
+.suportactive .desktop .qrCode h3 span {
+  color: #b983ff;
+}
+
+@media only screen and (max-width: 936px) and (min-width: 430px) {
+  .suportactive .mobile {
+    display: grid;
+    place-items: center;
+    margin: 0 30px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    color: black;
+  }
+
+  .suportactive .mobile form p {
+    border: 2px solid #04aa6d;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .suportactive .mobile form button {
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    background-color: #04aa6d;
+    padding: 10px 20px;
+  }
+  .suportactive .mobile img {
+    width: 15rem;
+    margin: 10px 0 30px;
+  }
+}
+
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;

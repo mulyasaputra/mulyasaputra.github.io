@@ -166,7 +166,7 @@
 
 /* Button Up */
 .button-up {
-  z-index: 99;
+  z-index: 98;
   width: 50px;
   right: -50px;
   height: 50px;

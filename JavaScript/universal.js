@@ -49,7 +49,15 @@ $("#Blog").on("click", function () {
   alert("Untuk saat ini halaman blog belum bisa di akses oleh semua orang termasuk saya");
 });
 $(".suport").on("click", function () {
-  alert("click button suport");
+  // alert("click button suport");
+  $("body").addClass("frizee");
+  $(".menu .daftar").removeClass("active");
+  $(".menu-btn i").removeClass("active");
+  $("#modalBox").css("display", "grid");
+});
+$(".container-modalbox .selesai").on("click", function () {
+  $("body").removeClass("frizee");
+  $("#modalBox").css("display", "none");
 });
 
 // Hak Copta
@@ -101,4 +109,13 @@ $(document).ready(function () {
     $("html").animate({ scrollTop: 0 });
     $("html").css("scrollBehavior", "auto");
   });
+});
+
+$("body").keypress(function (a, b) {
+  if ((event.keyCode == 10 || event.keyCode == 13) && event.ctrlKey) {
+    $(".suportactive").css("display", "grid");
+  }
+});
+$(".suportactive .exit").click(function () {
+  $(".suportactive").css("display", "none");
 });
