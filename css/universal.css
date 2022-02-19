@@ -471,36 +471,38 @@ img.mfp-img {
   right: 38px;
   bottom: 80px;
 }
-.suportactive .mobile {
-  display: none !important;
-}
-.suportactive .desktop {
-  display: grid;
-  grid-template-columns: 30rem 2fr;
-  place-items: center;
-  max-width: 1426px;
-  width: calc(100vw - 40px);
-}
-.suportactive .desktop .qrCode {
-  background-color: #04aa6d;
-  height: 30rem;
-  padding: 20px 20px 0;
-  border-radius: 20px;
-}
-.suportactive .desktop .qrCode img {
-  width: 20rem;
-  border-radius: 10px;
-}
-.suportactive .desktop .qrCode h3 {
-  text-transform: uppercase;
-  font-size: 4rem;
-  line-height: 1px;
-  color: #ff0075;
-}
-.suportactive .desktop .qrCode h3 span {
-  color: #b983ff;
+.suportactive :where(.mobile, .desktop) {
+  display: none;
 }
 
+@media only screen and (min-width: 937px) {
+  .suportactive .desktop {
+    display: grid;
+    grid-template-columns: 30rem 2fr;
+    place-items: center;
+    max-width: 1426px;
+    width: calc(100vw - 40px);
+  }
+  .suportactive .desktop .qrCode {
+    background-color: #04aa6d;
+    height: 30rem;
+    padding: 20px 20px 0;
+    border-radius: 20px;
+  }
+  .suportactive .desktop .qrCode img {
+    width: 20rem;
+    border-radius: 10px;
+  }
+  .suportactive .desktop .qrCode h3 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    line-height: 1px;
+    color: #ff0075;
+  }
+  .suportactive .desktop .qrCode h3 span {
+    color: #b983ff;
+  }
+}
 @media only screen and (max-width: 936px) and (min-width: 430px) {
   .suportactive .mobile {
     display: grid;

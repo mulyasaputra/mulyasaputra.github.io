@@ -54,6 +54,7 @@ $(".suport").on("click", function () {
   $(".menu .daftar").removeClass("active");
   $(".menu-btn i").removeClass("active");
   $("#modalBox").css("display", "grid");
+  $(".suportactive").css("display", "none");
 });
 $(".container-modalbox .selesai").on("click", function () {
   $("body").removeClass("frizee");
