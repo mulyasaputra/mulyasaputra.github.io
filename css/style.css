@@ -364,6 +364,8 @@ h1 span {
   color: Var(--White);
   border: none;
   outline: none;
+  resize: vertical;
+  padding: 10px 20px;
 }
 .contents .inti i {
   padding-left: 20px;
