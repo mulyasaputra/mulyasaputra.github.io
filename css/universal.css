@@ -452,6 +452,10 @@ img.mfp-img {
 }
 
 /* ModalBox Suport Section Easteregg */
+.suportText,
+.exit {
+  color: white;
+}
 #modalBoxEasteregg {
   display: none;
   place-items: center;
@@ -496,7 +500,8 @@ img.mfp-img {
   .suportactive .desktop .qrCode h3 {
     text-transform: uppercase;
     font-size: 4rem;
-    line-height: 1px;
+    line-height: 8rem;
+    margin: 0;
     color: #ff0075;
   }
   .suportactive .desktop .qrCode h3 span {
@@ -519,6 +524,7 @@ img.mfp-img {
     color: black;
     padding: 10px 20px;
     border-radius: 10px;
+    margin-top: 1rem;
   }
   .suportactive .mobile form button {
     border: 0;
@@ -526,6 +532,7 @@ img.mfp-img {
     color: white;
     background-color: #04aa6d;
     padding: 10px 20px;
+    margin-top: 1rem;
   }
   .suportactive .mobile img {
     width: 15rem;
