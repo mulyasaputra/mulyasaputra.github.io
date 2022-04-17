@@ -274,66 +274,59 @@ h1 span {
 .video {
   padding: 15px 0 50px 0;
   background-color: var(--Passive);
+  display: grid;
+  place-items: center;
 }
 #embed {
-  display: grid;
-  margin: 0 20px;
-  column-gap: 23px;
-  grid-template-columns: 1fr 1fr;
-}
-.videos {
-  overflow: hidden;
+  padding: 0 20px;
+  max-width: 1000px;
+  width: 100%;
   position: relative;
 }
-.videos:hover .play {
-  height: calc(100% - 4px);
-}
-.play {
-  left: 0;
-  height: 0;
-  bottom: 4px;
+#embed .text-video {
   width: 100%;
-  display: grid;
-  overflow: hidden;
-  border-radius: 8px;
-  position: absolute;
-  place-items: center;
-  background: #22222a67;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(2px);
-  -o-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
+  height: 100%;
+  /* background: rgb(136, 129, 146);
+  background: linear-gradient(
+    90deg,
+    rgba(136, 129, 146, 1) 58%,
+    rgba(136, 129, 146, 0.7) 77%,
+    rgba(136, 129, 146, 0.6) 93%,
+    rgba(136, 129, 146, 0.3533788515406162) 100%
+  ); */
 }
-.play img {
-  height: 111px;
+.text-video p {
+  margin-top: 4em;
+  font-size: 0.8rem;
+  line-height: 1.7;
 }
-.videos img {
-  border-radius: 7px;
-  width: 100%;
-}
-.title-video {
-  margin-top: 8px;
-}
-.title-video a {
+.text-video p a {
   text-decoration: none;
-  color: white;
+  color: var(--White);
 }
-
-#videostory {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  height: 100vh;
-  background: var(--Blur);
-  backdrop-filter: blur(2px);
+.text-video p a:hover {
+  text-decoration: none;
+  color: var(--Clear);
+  text-decoration: underline;
+}
+.video #embed .botton-play {
+  z-index: 99;
+  position: absolute;
+  top: calc(50% - 2em);
+  right: 20px;
+  width: 9em;
+  height: 4em;
+  border-radius: 100px;
+  border: 2px dashed #f5f5f5;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+#embed .botton-play svg {
+  height: 50%;
+  fill: #f5f5f5;
 }
 /* Testimonials */
-.Testimonials .tittle h4 span {
-  color: var(--Red);
-}
 .Testimonials .box-container {
   font-family: Medium;
   /* display: grid; */

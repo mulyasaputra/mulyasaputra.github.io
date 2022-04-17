@@ -1,3 +1,6 @@
+// $("#botton-play").click(function () {
+//   $(".botton-play").css("position", "relative");
+// });
 // Rest Api tes
 $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/index.json?print=pretty", function (data) {
   let postBanner = data.postBanner;
@@ -14,24 +17,6 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/index.json?print=p
         '"><h3>' +
         data.postName +
         "</h3></a><span>Download the concept design only from InSketch.</span></div></div></div>"
-    );
-  });
-  let postVideo = data.postVideo;
-  $.each(postVideo, function (i, data) {
-    $("#embed").append(
-      `<div class="card-video">
-        <div class="videos">
-          <img
-            src="${data.urlGambar}"
-          />
-          <div class="play">
-            <a href="${data.urlVideo}" id="videolink" class="button more">
-              <img src="/Img/play-circle-solid.svg" />
-            </a>
-          </div>
-        </div>
-        <div class="title-video"><i class="fas fa-share"></i><a href="${data.urlVideo}">${data.urlNama}</a></div>
-      </div>`
     );
   });
 });
