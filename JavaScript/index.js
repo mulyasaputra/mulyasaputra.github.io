@@ -1,24 +1,28 @@
-// $("#botton-play").click(function () {
-//   $(".botton-play").css("position", "relative");
-// });
-// Rest Api tes
-$.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/index.json?print=pretty", function (data) {
-  let postBanner = data.postBanner;
-  $.each(postBanner, function (i, data) {
+// Rest Api Baner
+$.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", function (data) {
+  $.each(data, function (i, data) {
     $("#lembar").append(
       '<div class="box-project"><img src="' +
-        data.urlGambar +
+        data.pic.thumbnail +
         '" alt="" /><div class="box-overvlow"><div class="over-top"><h5>' +
-        data.postTag +
-        '</h5><a href="' +
-        data.urlAction +
-        '"><i class="fas fa-arrow-right"></i></a></div><div class="over-bottom"><a href="' +
-        data.urlAction +
+        data.tag.master +
+        '</h5><a href="/preview?id=' +
+        data.id +
+        '"><i class="fas fa-arrow-right"></i></a></div><div class="over-bottom"><a href="/preview?id=' +
+        data.id +
         '"><h3>' +
-        data.postName +
+        data.name +
         "</h3></a><span>Download the concept design only from InSketch.</span></div></div></div>"
     );
   });
+});
+// Rest Api Video
+$.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/player.json?print=pretty", function (player) {
+  var link = player.link;
+  var play = link.split("be/")[1];
+  var final = `https://www.youtube.com/embed/${play}?enablejsapi=1&version=3&playerapiid=ytplayer&autoplay=1`;
+  $(".elementor-video").prop("src", final);
+  $(".text-video h2").html(player.tittle);
 });
 
 // Get the modal

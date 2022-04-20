@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/universal.css" />
+    <link rel="stylesheet" href="css/NavbarRE.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>404</title>
+    <style>
+      /* Error page */
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        top: 0;
+      }
+      .daftar {
+        padding: 0 30px;
+      }
+      body {
+        background-color: var(--Dark);
+        color: var(--Clear);
+        font-family: ursive;
+      }
+      .error {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        margin: 8% 4% 0;
+      }
+      .error .img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .error .text-error {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .error .text-error h2 {
+        font-family: "Lobster", cursive;
+        font-size: 5rem;
+        text-align: center;
+        margin-bottom: 8rem;
+      }
+      .error .text-error p {
+        font-size: 2rem;
+        text-align: right;
+      }
+      @media (max-width: 1334px) {
+        .error {
+          margin-top: 90px;
+          grid-template-columns: 1fr;
+          gap: 10rem;
+        }
+        .error .text-error p {
+          text-align: center;
+        }
+      }
+      @media (max-width: 753px) {
+        .error .text-error h2 {
+          font-size: 3rem;
+          margin-bottom: 20px;
+        }
+        .error {
+          margin-top: 90px 20px 0;
+          grid-template-columns: 1fr;
+          gap: 5rem;
+        }
+        .error .text-error p:nth-child(3),
+        .error .text-error p:nth-child(4) {
+          display: none;
+        }
+        img {
+          width: 60%;
+        }
+      }
+      @media (max-width: 447px) {
+        .error .text-error h2 {
+          font-size: 2rem;
+        }
+        .error .text-error p:nth-child(2) {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 300px) {
+        .error .text-error h2 {
+          font-size: 1.8rem;
+        }
+        .error .text-error p:nth-child(2) {
+          font-size: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">In<span>Sketch</span></div>
+      <div class="menu">
+        <ul class="daftar">
+          <a id="Welcome">Welcome </a>
+          <a id="Download">Download</a>
+          <a id="License">License</a>
+          <a id="Blog">Blog</a>
+          <button class="suport">Suport</button>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <div class="error">
+      <div class="img"><img src="Img/error.png" alt="gambar" /></div>
+      <div class="text-error">
+        <h2>AWWWW....DON'T <br />CRY.</h2>
+        <p>It's just a 404 Error!</p>
+        <p>PAGE NOT FOUND</p>
+        <p>It might has been removed, renamed Or temporarily unavailable.</p>
+      </div>
+    </div>
+    <!-- ModalBox Suport Section -->
+    <div id="modalBoxEasteregg" class="suportactive">
+      <div class="container-suport-easteregg">
+        <div class="desktop">
+          <div class="qrCode">
+            <img src="/Img/qr-code.jpg" alt="QR" />
+            <h3>scan <span>me!</span></h3>
+          </div>
+          <div class="suportText">
+            <h3>Terima kasih telah mendudung kami !</h3>
+          </div>
+        </div>
+        <div class="mobile">
+          <h4>Yuk dukung kami !</h4>
+          <p>Cukup kunjungi URL dibawah ini atau scan QR Code jika anda suka dengan tantangan</p>
+          <form target="_blank" action="https://saweria.co/BabbelPay">
+            <p>https://saweria.co/BabbelPay</p>
+            <button type="submit">Submit</button>
+          </form>
+          <img src="/Img/qr-code.jpg" alt="" />
+        </div>
+      </div>
+      <i class="far fa-times-circle exit"></i>
+    </div>
+    <div id="modalBox" class="suportpasif">
+      <div class="container-modalbox">
+        <img src="/Icons/selesain.svg" alt="" />
+        <p>Terima Kasih telah mendukung kami!!</p>
+        <button class="selesai">Selesai</button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JavaScript/universal.js"></script>
+  </body>
+</html>
