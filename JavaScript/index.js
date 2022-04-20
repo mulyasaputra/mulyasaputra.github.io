@@ -53,34 +53,7 @@ $("#videolink").magnificPopup({
   showCloseBtn: false,
 });
 
-{
-  /* <div id="${data.idNama}" class="mfp-hide">
-<iframe
-  width="853"
-  height="480"
-  src="https://www.youtube.com/embed/${data.urlVideo}"
-  title="${data.urlNama}"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
-</div> */
-}
-
 // Start Video Mobile Function
-// let button = document.querySelector("#botton-play"),
-//   modalBox = document.querySelector(".modalBox");
-
-// button.onclick = function () {
-//   modalBox.classList.add("active");
-//   button.classList.add("hiden");
-// };
-// modalBox.onclick = function () {
-//   modalBox.classList.remove("active");
-//   button.classList.remove("hiden");
-//   player.stopVideo();
-// };
-
 $("#botton-play").click(function () {
   $(".elementor-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "playVideo" + '","args":""}', "*");
   $(".modalBox").addClass("active");
