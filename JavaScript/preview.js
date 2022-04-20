@@ -2,9 +2,8 @@ let link = window.location.href;
 sPageURL = link.substring(link.indexOf("?") + 1).split("=")[1];
 $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", function (data) {
   let kontent = "";
-  // Tamppil Data
   $.each(data, function (i, data) {
-    if (data.id == sPageURL) {
+    if (sPageURL == data.id) {
       kontent = `
       <div class="heroimages">
         <img src="${data.banner}" alt="" />
@@ -89,10 +88,12 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
         </div>
         </div>
       </div>`;
-    } else {
-      window.location = "404.html";
     }
   });
   // Print Data
-  $("#postBlog").html(kontent);
+  if (kontent == "") {
+    window.location = "404.html";
+  } else {
+    $("#postBlog").html(kontent);
+  }
 });
