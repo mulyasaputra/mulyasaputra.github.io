@@ -22,7 +22,7 @@
   --Clear: #ffffff;
   --Black: #111111;
   --Footer: #acacac;
-  --Passive: #888192;
+  --Passive: #262626;
   --Non-Aktif: #1d1d1f;
   --Blur: rgba(0, 0, 0, 0.11);
   --Button-Blur: rgba(240, 248, 255, 0.2);
@@ -41,12 +41,15 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
+  border-radius: 10px;
   background: #888192;
 }
 ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border: 2px solid #888192;
   background: #625d69;
 }
 ::-webkit-scrollbar-thumb:hover {

@@ -139,7 +139,7 @@ h1 span {
 }
 /* FileSectuon */
 .extension {
-  background-color: var(--Aktif);
+  background-color: var(--Passive);
   padding: 15px 0;
   flex-wrap: wrap;
   text-align: center;
@@ -326,6 +326,41 @@ h1 span {
   height: 50%;
   fill: #f5f5f5;
 }
+/* Start video Modal */
+.container-video {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.container-video iframe {
+  border: 3px solid #f5f5f5;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+.elementor-video {
+  width: 100%;
+}
+.modalBox.active {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-content: space-around;
+  padding: 0 6%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: var(--Blur);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+}
+.modalBox,
+.hiden {
+  display: none;
+}
+/* End video Modal */
+
 /* Testimonials */
 .Testimonials .box-container {
   font-family: Medium;
@@ -395,7 +430,7 @@ h1 span {
 
 /* contact Us */
 .Contact {
-  background: var(--Aktif);
+  background: var(--Passive);
   padding: 2px 0 40px 0;
 }
 .contents {
