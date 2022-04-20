@@ -68,17 +68,27 @@ $("#videolink").magnificPopup({
 }
 
 // Start Video Mobile Function
-let button = document.querySelector("#botton-play"),
-  body = document.querySelector("body"),
-  modalBox = document.querySelector(".modalBox");
-button.onclick = function () {
-  modalBox.classList.add("active");
-  button.classList.add("hiden");
-  // body.classList.add("frizee");
-};
-modalBox.onclick = function () {
-  modalBox.classList.remove("active");
-  button.classList.remove("hiden");
-  // body.classList.remove("frizee");
-};
+// let button = document.querySelector("#botton-play"),
+//   modalBox = document.querySelector(".modalBox");
+
+// button.onclick = function () {
+//   modalBox.classList.add("active");
+//   button.classList.add("hiden");
+// };
+// modalBox.onclick = function () {
+//   modalBox.classList.remove("active");
+//   button.classList.remove("hiden");
+//   player.stopVideo();
+// };
+
+$("#botton-play").click(function () {
+  $(".elementor-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "playVideo" + '","args":""}', "*");
+  $(".modalBox").addClass("active");
+  $("#botton-play").addClass("hiden");
+});
+$(".modalBox").click(function () {
+  $(".elementor-video")[0].contentWindow.postMessage('{"event":"command","func":"' + "stopVideo" + '","args":""}', "*");
+  $(".modalBox").removeClass("active");
+  $("#botton-play").removeClass("hiden");
+});
 // End Video Mobile Function
