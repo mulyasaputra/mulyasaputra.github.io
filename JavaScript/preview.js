@@ -1,6 +1,5 @@
 let link = window.location.href;
-sPageURL = link.substring(link.indexOf("?") + 1).split("=")[1];
-console.log(sPageURL);
+sPageURL = link.substring(link.indexOf("?") + 1).split(/[=&]+/)[1];
 $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", function (data) {
   let kontent = "";
   $.each(data, function (i, data) {
@@ -92,9 +91,9 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
     }
   });
   // Print Data
-  // if (kontent == "") {
-  //   window.location = "404.html";
-  // } else {
-  //   $("#postBlog").html(kontent);
-  // }
+  if (kontent == "") {
+    window.location = "404.html";
+  } else {
+    $("#postBlog").html(kontent);
+  }
 });
