@@ -36,7 +36,7 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
             </div>
             <div class="button">
               <a href="${data.download}" class="dwn">Download</a>
-              <a href="${data.share}"><div class="far fa-share-square"></div></a>
+              <div class="far fa-share-square" onclick="return myFunction();"></div>
             </div>
           </div>
         </div>
@@ -88,6 +88,26 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
         </div>
         </div>
       </div>`;
+
+      // Button Share
+      $(".Facebook").on("click", function () {
+        window.open(`https://www.facebook.com/dialog/share?app_id=87741124305&href=${link}`, `_blank`);
+      });
+      $(".Whatsapp").on("click", function () {
+        window.open(`whatsapp://send?text=${data.tittle}%20%2D%20${link}`, `_blank`);
+      });
+      $(".Telegram").on("click", function () {
+        window.open(
+          `https://telegram.me/share/url?url=${link} & text=Ada%20yang%20keren%20lho,%20nyesel%20kalo%20ga%20buka...`,
+          `_blank`
+        );
+      });
+      $(".Pinterent").on("click", function () {
+        window.open(
+          `https://www.pinterest.com/pin/create/button/?url=${link}%26feature%3Dshare&description=Download%20the%20concept%20design%20only%20from%20InSketch.&is_video=false&media=https://cdn.dribbble.com/users/7368765/screenshots/16026817/media/9affcfaf82262907e176650c563f2d8a.png`,
+          `_blank`
+        );
+      });
     }
   });
   // Print Data
@@ -97,3 +117,12 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
     $("#postBlog").html(kontent);
   }
 });
+
+// Modal Box
+function myFunction() {
+  $(".modal-wrapper").addClass("open");
+}
+$("#closeBtn").click(function () {
+  $(".modal-wrapper").removeClass("open");
+});
+$("#bar input").val(link);

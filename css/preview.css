@@ -227,3 +227,146 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* Moladbox Share */
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.596);
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  color: var(--Clear);
+  z-index: 2;
+}
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+  padding: 0 24px;
+  width: 600px;
+  height: 400px;
+  background-color: var(--Dark);
+  display: block;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px, rgba(0, 0, 0, 0.4) 0px 8px 10px -5px;
+  position: relative;
+}
+.modal i {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: grid;
+  place-items: center;
+  transition: all 200ms ease-in-out;
+}
+.modal i:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+.head h3 {
+  margin-top: 56px;
+  font-family: Light;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+}
+.share h3 {
+  font-family: Light;
+  letter-spacing: 1px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.btn-share {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+.target {
+  line-height: 3;
+  margin: 1px 0;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 1px 2px;
+  outline: none;
+  text-align: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.target span {
+  font-size: 13px;
+  font-family: Light;
+  letter-spacing: 1px;
+}
+.btn-share .buttonClick {
+  --prv: 67px;
+  width: var(--prv);
+  height: var(--prv);
+  border-radius: 100px;
+  padding: var(--pdg);
+  background-color: var(--clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonClick svg {
+  fill: var(--Clear);
+}
+.share #bar {
+  margin-top: 30px;
+  background-color: #181818;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+#bar input {
+  margin-left: 16px;
+  border: none;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--Clear);
+  font-size: 14px;
+  padding: 3px 10px;
+  font-family: Light;
+  letter-spacing: 1px;
+}
+#bar input:focus {
+  outline: 1px solid;
+}
+#bar span {
+  padding: 0 18px;
+  cursor: pointer;
+  font-family: Light;
+  letter-spacing: 1px;
+  color: var(--Biru);
+}
+@media (max-width: 663px) {
+  .modal {
+    transform: scale(0.7);
+  }
+}
