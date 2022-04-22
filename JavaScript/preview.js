@@ -125,7 +125,4 @@ function myFunction() {
 $("#closeBtn").click(function () {
   $(".modal-wrapper").removeClass("open");
 });
-$(".modal-wrapper").click(function () {
-  $(".modal-wrapper").removeClass("open");
-});
 $("#bar input").val(link);
