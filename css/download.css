@@ -423,3 +423,72 @@ img {
 .addColor {
   color: var(--Clear) !important;
 }
+
+/* Animasi */
+:is(.suport, .vbutton) span {
+  display: block;
+  position: absolute;
+  background: var(--color-animation);
+}
+:is(.suport, .vbutton) span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+:is(.suport, .vbutton):hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+:is(.suport, .vbutton) span:nth-child(2) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+:is(.suport, .vbutton):hover span:nth-child(2) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+:is(.suport, .vbutton) span:nth-child(3) {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 1px;
+  transform: scalex(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+:is(.suport, .vbutton):hover span:nth-child(3) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+:is(.suport, .vbutton) span:nth-child(4) {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 1px;
+  transform: scalex(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+:is(.suport, .vbutton):hover span:nth-child(4) {
+  transform: scalex(1);
+  transform-origin: right;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
