@@ -64,7 +64,7 @@ $(".container-modalbox .selesai").on("click", function () {
 // Hak Copta
 date = new Date();
 tahun = date.getFullYear();
-var hakCipta = "Hak cipta" + " © " + tahun + " InSketch. Seluruh hak cipta dilindungi oleh siapa.";
+var hakCipta = "Hak cipta" + " © 2019 - " + tahun + " InSketch. Seluruh hak cipta dilindungi oleh siapa.";
 document.getElementById("cc").innerHTML = hakCipta;
 
 // Animasi

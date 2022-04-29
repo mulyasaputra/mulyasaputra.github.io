@@ -38,7 +38,14 @@
   right: 16px;
 }
 .trckT {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.479)), to(rgba(0, 0, 0, 0)), color-stop(1, #ffffffbb));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.479)),
+    to(rgba(0, 0, 0, 0)),
+    color-stop(1, #ffffffbb)
+  );
   box-sizing: border-box;
 }
 .trackB {
@@ -287,18 +294,6 @@ a {
   font-size: 1rem;
   color: var(--Passive);
 }
-#about .box-media-sosial .bax-media {
-  width: 100%;
-  height: 90px;
-  background-color: var(--Passive);
-  border-radius: 10px;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Light;
-  letter-spacing: 2px;
-}
 #about .box-media-sosial .bax-sosial {
   background-color: var(--Passive);
   border-radius: 10px;
@@ -381,14 +376,6 @@ a {
     grid-template-columns: 1fr;
     gap: 2.2rem;
   }
-  #about .box-media-sosial {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-  #about .box-media-sosial .bax-media {
-    height: 100%;
-  }
 }
 @media (max-width: 742px) {
   #logo {
@@ -420,11 +407,6 @@ a {
     display: none;
   }
   /* About Section */
-  #about .box-media-sosial {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 1rem;
-  }
 }
 @media (max-width: 624px) and (min-width: 436px) {
   .webTitle h2 {
@@ -463,11 +445,6 @@ a {
     text-align: center;
   }
   /* About Section */
-  #about .box-media-sosial {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.4rem;
-  }
   #about .box-about .list2 span {
     display: inline-block;
   }
@@ -504,8 +481,7 @@ a {
 }
 @media (max-width: 400px) {
   /* About Section */
-  #about,
-  #about .box-media-sosial {
+  #about {
     grid-template-columns: 100%;
     gap: 10px;
   }
@@ -557,7 +533,6 @@ a {
     font-size: 8px;
   }
   /* About Section */
-  #about .box-media-sosial,
   .box-about hr {
     display: none;
   }
