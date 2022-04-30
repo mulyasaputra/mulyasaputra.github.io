@@ -87,18 +87,18 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/download.json?prin
     $("#logo").append(
       `<div class="logoSVG">
         <div class="trckT">
-          <span>${data.name}</span>
+          <span>${data.text.title}</span>
         </div>
         <div class="len">
           <img src="${data.label}" />
         </div>
         <div class="logoVC">
-          <a target="_blank" href="${data.visit}">
-            <img src="${data.logo}" alt="${data.name}" />
+          <a href="/view/logo?id=${data.id}">
+            <img src="${data.pic.logo}" alt="${data.text.title}" />
           </a>
         </div>
         <div class="trackB">
-          <a href="${data.ark}" class="fas fa-bezier-curve"></a>
+          <a class="fas fa-bezier-curve"></a>
           <a target="_blank" href="${data.download}" class="fas fa-download"></a>
           <a target="_blank" href="https://www.shutterstock.com/g/Saputra112?rid=270347736&utm_medium=email&utm_source=ctrbreferral-link" class="fas fa-shopping-cart"></a>
         </div>

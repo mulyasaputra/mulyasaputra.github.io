@@ -295,6 +295,11 @@ body {
   justify-content: flex-start;
   gap: 30px;
   margin-top: 20px;
+  overflow-y: scroll;
+}
+.btn-share::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .target {
   line-height: 3;

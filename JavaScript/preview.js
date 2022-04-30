@@ -108,6 +108,21 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/blogpost.json", fu
           `_blank`
         );
       });
+      $(".Twitter").click(function () {
+        window.open(
+          `https://twitter.com/home?status=${data.tittle}%20here%20${link}?url=https://mulyasaputra.github.io/`,
+          `_blank`
+        );
+      });
+      $(".Reddit").click(function () {
+        window.open(`https://reddit.com/submit?url=${link}&title=${data.tittle}`, `_blank`);
+      });
+      $(".Tumblr").click(function () {
+        window.open(
+          `https://www.tumblr.com/share/link?url=https://mulyasaputra.github.io/?url="${link}"&name="${data.tittle}"`,
+          `_blank`
+        );
+      });
     }
   });
   // Print Data
