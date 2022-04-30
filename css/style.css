@@ -24,6 +24,13 @@ img {
   max-width: 1380px;
   margin: auto;
 }
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
 .Welcome {
   display: flex;
   align-items: center;
@@ -494,6 +501,9 @@ h1 span {
 }
 
 /* animasi button */
+.gambar {
+  z-index: 1;
+}
 .gambar span {
   display: block;
   position: absolute;
@@ -560,4 +570,14 @@ h1 span {
   transform-origin: right;
   transition: transform 0.5s;
   transition-delay: 0.5s;
+}
+.Contact {
+  position: relative;
+  z-index: 1;
+}
+#ctaAnimation {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
