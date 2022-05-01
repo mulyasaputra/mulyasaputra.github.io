@@ -69,3 +69,6 @@ $(".modalBox").click(function () {
   $("#botton-play").removeClass("hiden");
 });
 // End Video Mobile Function
+
+let heroHeight = $(".herosection").height();
+$("#particles-js").height(heroHeight + 90);

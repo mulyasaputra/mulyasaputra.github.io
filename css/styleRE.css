@@ -103,6 +103,13 @@
   .video #embed .botton-play {
     right: calc(50% - 4.5em);
   }
+  img.video-img {
+    display: block;
+    top: 78px;
+    left: 10%;
+    position: absolute;
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 582px) and (min-width: 414px) {
   .view .review p {

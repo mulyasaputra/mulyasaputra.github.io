@@ -299,9 +299,14 @@ h1 span {
   height: 300px;
 }
 #embed .text-video {
+  text-align: center;
   width: 100%;
   height: 100%;
 }
+img.video-img {
+  display: none;
+}
+
 #text-background {
   font-family: Medium;
   z-index: 0;
@@ -326,7 +331,7 @@ h1 span {
   z-index: 99;
   position: absolute;
   top: calc(50% - 2em);
-  right: 20px;
+  left: calc(50% - 9em / 2);
   width: 9em;
   height: 4em;
   border-radius: 100px;
@@ -580,4 +585,39 @@ h1 span {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.button-up.show {
+  background-color: transparent !important;
+  right: 27px !important;
+  bottom: 34px !important;
+}
+.button-up {
+  transform: rotate(120deg) !important;
+}
+.button-up img {
+  width: 100% !important;
+  transform: rotate(-45deg);
+}
+.button-up.show:hover {
+  transform: rotate(0deg) !important;
+  animation: none;
+}
+.button-up.show {
+  animation: 2s ease 0s normal none infinite running bounce;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }
