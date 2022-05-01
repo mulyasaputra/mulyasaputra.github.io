@@ -589,6 +589,7 @@ img.video-img {
 
 .button-up.show {
   background-color: transparent !important;
+  transform: rotate(0deg) !important;
   right: 27px !important;
   bottom: 34px !important;
 }
@@ -597,7 +598,7 @@ img.video-img {
 }
 .button-up img {
   width: 100% !important;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) !important;
 }
 .button-up.show:hover {
   transform: rotate(0deg) !important;
