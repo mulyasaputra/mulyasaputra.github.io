@@ -121,10 +121,10 @@ $(".suportactive .exit").click(function () {
   $(".suportactive").css("display", "none");
 });
 
-// Blur Browser Firefox
-var isFirefox = typeof InstallTrigger !== "undefined";
-if (isFirefox == true) {
-  $(".navbar").css("background", "var(--Firefox)");
-  $("#modalBoxEasteregg").css("background", "#363647b6");
-  // $(".navbar").css("background", "#363647");
-}
+// // Blur Browser Firefox
+// var isFirefox = typeof InstallTrigger !== "undefined";
+// if (isFirefox == true) {
+//   $(".navbar").css("background", "var(--Firefox)");
+//   $("#modalBoxEasteregg").css("background", "#363647b6");
+//   // $(".navbar").css("background", "#363647");
+// }
