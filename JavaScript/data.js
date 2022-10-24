@@ -1,54 +1,51 @@
-// Drag to slide
-const slider = document.querySelector("#lembar");
-const review = document.querySelector(".Testimonials .box-container");
-let mouseDown,
-  mouseKlik = false;
-let startX, scrollLeft, startY, scrollRight;
+const newDesign = document.querySelector("#lembar"),
+  slider = document.querySelector("#slider");
+let isDown = false;
+let scrollLeft;
+let startX;
 
 // Drag to slide Project
-let startDragging = function (e) {
-  mouseDown = true;
+newDesign.addEventListener("mousedown", (e) => {
+  isDown = true;
+  newDesign.classList.add("active");
+  startX = e.pageX - newDesign.offsetLeft;
+  scrollLeft = newDesign.scrollLeft;
+});
+newDesign.addEventListener("mouseleave", () => {
+  isDown = false;
+  newDesign.classList.remove("active");
+});
+newDesign.addEventListener("mouseup", () => {
+  isDown = false;
+  newDesign.classList.remove("active");
+});
+newDesign.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - newDesign.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  newDesign.scrollLeft = scrollLeft - walk;
+});
+// // Drag to slide Review
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
   startX = e.pageX - slider.offsetLeft;
   scrollLeft = slider.scrollLeft;
-};
-let stopDragging = function (event) {
-  mouseDown = false;
-};
-
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
 slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
   e.preventDefault();
-  if (!mouseDown) {
-    return;
-  }
   const x = e.pageX - slider.offsetLeft;
-  const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
 });
-
-// Drag to slide Review
-let startDrag = function (b) {
-  mouseKlik = true;
-  startY = b.pageX - review.offsetLeft;
-  scrollRight = review.scrollLeft;
-};
-let stopDrag = function (event) {
-  mouseKlik = false;
-};
-
-review.addEventListener("mousemove", (b) => {
-  b.preventDefault();
-  if (!mouseKlik) {
-    return;
-  }
-  const y = b.pageX - review.offsetLeft;
-  const scrol = y - startY;
-  review.scrollLeft = scrollRight - scrol;
-});
-
-// Add the event listeners
-slider.addEventListener("mousedown", startDragging, false);
-review.addEventListener("mousedown", startDrag, false);
-slider.addEventListener("mouseup", stopDragging, false);
-review.addEventListener("mouseup", stopDrag, false);
-slider.addEventListener("mouseleave", stopDragging, false);
-review.addEventListener("mouseleave", stopDrag, false);

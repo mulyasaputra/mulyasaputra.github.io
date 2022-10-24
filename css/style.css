@@ -168,15 +168,19 @@ h1 span {
   margin-bottom: 2rem;
 }
 #lembar {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  will-change: transform;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 10px;
   margin: 0 20px 2rem;
+  scrollbar-width: none;
   gap: 1rem;
   display: flex;
-  overflow-x: auto;
-  border-radius: 10px;
-  scrollbar-width: none;
-}
-.myboard {
-  scroll-snap-type: x mandatory;
 }
 #lembar:hover,
 #lembar:hover .box-project .box-overvlow,
@@ -198,7 +202,6 @@ h1 span {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
-  scroll-snap-align: start;
 }
 #lembar::-webkit-scrollbar {
   height: 0;
@@ -255,7 +258,11 @@ h1 span {
   border-radius: 50px;
 }
 .over-bottom {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 6.01%, rgba(0, 0, 0, 0.45) 66.29%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 6.01%,
+    rgba(0, 0, 0, 0.45) 66.29%
+  );
   padding: 45px 20px 20px;
   height: 30%;
 }
@@ -381,18 +388,17 @@ img.video-img {
 
 /* Testimonials */
 .Testimonials .box-container {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: all 0.2s;
+  will-change: transform;
+  user-select: none;
   font-family: Medium;
-  /* display: grid; */
-  /* place-items: center; */
-  /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* gap: 1rem; */
   gap: 1rem;
   display: flex;
-  overflow-x: auto;
   margin: 0 20px 2rem;
   scrollbar-width: none;
-  scroll-snap-type: x mandatory;
 }
 .Testimonials .box-container::-webkit-scrollbar {
   height: 0;
@@ -408,7 +414,6 @@ img.video-img {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   padding: 2rem 1.3rem;
   backdrop-filter: blur(0.4rem);
-  scroll-snap-align: start;
 }
 .Testimonials .box-container .box .images {
   display: flex;
@@ -585,40 +590,4 @@ img.video-img {
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.button-up.show {
-  background-color: transparent !important;
-  transform: rotate(0deg) !important;
-  right: 27px !important;
-  bottom: 34px !important;
-}
-.button-up {
-  transform: rotate(120deg) !important;
-}
-.button-up img {
-  width: 100% !important;
-  transform: rotate(-45deg) !important;
-}
-.button-up.show:hover {
-  transform: rotate(0deg) !important;
-  animation: none;
-}
-.button-up.show {
-  animation: 2s ease 0s normal none infinite running bounce;
-}
-@keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
 }
