@@ -85,3 +85,9 @@ $(".modalBox").click(function () {
 
 let heroHeight = $(".herosection").height();
 $("#particles-js").height(heroHeight + 90);
+
+// Logo Loader
+setTimeout(function () {
+  $("#InLoader").css("display", "none");
+  window.scrollTo(0, 0);
+}, 5700);
