@@ -323,7 +323,7 @@ img.video-img {
   font-size: 5em;
   color: transparent;
   letter-spacing: 9px;
-  -webkit-text-stroke: 0.1px var(--bgr-color);
+  -webkit-text-stroke: 1px var(--bgr-color);
 }
 #text-background:nth-child(1) {
   left: 20px;
