@@ -70,7 +70,7 @@
   background-color: var(--Footer);
   display: grid;
   grid-template-rows: 6fr 1fr;
-  row-gap: 60px;
+  row-gap: 10px;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
@@ -100,6 +100,7 @@
   grid-template-columns: 2fr 8fr;
   color: var(--Dark);
   column-gap: 90px;
+  margin-bottom: 64px;
 }
 .infoLink .homeLink p {
   font-weight: 600;
@@ -164,6 +165,7 @@
   align-self: center;
   color: var(--Dark);
   font-size: 13px;
+  z-index: 1;
 }
 .wave {
   background: rgb(255 255 255 / 25%);
@@ -176,6 +178,7 @@
   opacity: 0.8;
   bottom: 0;
   left: 0;
+  z-index: 0;
 }
 .wave:nth-of-type(2) {
   bottom: -1.25em;

@@ -292,7 +292,7 @@ a {
   margin-right: 14px;
   font-family: Light;
   font-size: 1rem;
-  color: var(--Passive);
+  color: var(--Clear);
 }
 #about .box-media-sosial .bax-sosial {
   background-color: var(--Passive);
@@ -338,7 +338,7 @@ a {
 }
 @media (max-width: 966px) {
   #pagePost {
-    margin: 0 25px 70px;
+    margin: 5rem 20px 70px;
   }
   .len {
     width: 20px;
@@ -447,6 +447,18 @@ a {
   /* About Section */
   #about .box-about .list2 span {
     display: inline-block;
+  }
+}
+@media (max-width: 500px) {
+  #option {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .link {
+    justify-content: space-between;
+  }
+  .custom-select {
+    width: 100% !important;
   }
 }
 @media (max-width: 436px) {

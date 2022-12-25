@@ -1,5 +1,6 @@
 body {
   background: var(--Dark);
+  overflow-x: hidden;
 }
 * {
   margin: 0;
@@ -7,7 +8,6 @@ body {
 #body {
   cursor: default;
   padding-top: 110px;
-  margin: 0 40px;
 }
 #pagePost {
   margin: 0 40px 70px;
@@ -17,9 +17,10 @@ body {
   justify-content: center;
   display: flex;
   align-items: center;
+  margin-bottom: 5em;
 }
 #profile .img {
-  background-image: url("https://ak.picdn.net/contributors/270347736/avatars/thumb.jpg");
+  background-image: url("/Img/thumb.webp");
   background-size: cover;
   height: 120px;
   width: 120px;
@@ -93,22 +94,43 @@ body {
 
 /* Option Section */
 #option {
-  position: relative;
-  margin-top: 90px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 53px;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
+  padding: 10px 20px;
 }
 #option::after {
   position: absolute;
   content: " ";
   width: 100%;
   border-bottom: 1px solid #888192;
-  bottom: -10px;
+  bottom: 0;
+  left: 0;
+}
+#option::before {
+  position: absolute;
+  content: "";
+  background: var(--Blur);
+  backdrop-filter: blur(100px);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.navbar {
+  background: #22222a;
 }
 .link {
   max-width: 500px;
   display: flex;
   overflow-x: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .link::-webkit-scrollbar {
   height: 0;
@@ -117,12 +139,12 @@ body {
   font-size: 16px;
   text-decoration: none;
   font-family: Medium;
-  margin-right: 20px;
-  color: #6e6d7a;
+  color: #cecece;
+  height: fit-content;
 }
 .link a:hover {
   cursor: pointer;
-  color: rgb(179, 179, 179);
+  color: rgb(255, 255, 255);
 }
 /* The container must be positioned relative: */
 .custom-select {
@@ -189,11 +211,9 @@ body {
 }
 /* Content section */
 #isiPostingan {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 10px;
-  column-gap: 30px;
+  gap: 30px;
 }
 /* myCard section */
 .TLable {
@@ -207,7 +227,6 @@ body {
   font-family: Light;
 }
 .card {
-  margin: 19px 0;
   position: relative;
   border-radius: 6px 6px 0 0;
   overflow: hidden;
@@ -285,20 +304,14 @@ img {
 }
 
 @media (max-width: 965px) {
-  #body {
+  #profile > * {
     margin: 0 25px;
   }
-  /* Option Section */
-  #option {
-    display: block;
+  #profile .nama {
+    margin-top: 20px;
   }
-  #option::after {
-    bottom: 60%;
-  }
-  /* The container must be positioned relative: */
-  .custom-select {
-    margin-top: 50px;
-  }
+
+  /* Postingan */
   #isiPostingan {
     grid-template-columns: 1fr 1fr;
   }
@@ -310,17 +323,8 @@ img {
     border-radius: 10px;
   }
   /* Geser Ke atas */
-  #videos,
-  #logo,
-  #vector,
-  #Website,
-  #about {
+  #pagePost > * {
     margin-top: -40px;
-  }
-  #pagePost #videos {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 20px;
-    column-gap: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -381,9 +385,6 @@ img {
   .blok {
     font-size: 50px;
   }
-  #pagePost #videos {
-    grid-template-columns: 1fr;
-  }
 }
 @media (max-width: 292px) {
   .blok {
@@ -396,11 +397,7 @@ img {
   }
 }
 @media (min-width: 965px) {
-  #videos,
-  #logo,
-  #vector,
-  #Website,
-  #about {
+  #pagePost > * {
     margin-top: 40px;
   }
 }
@@ -412,80 +409,12 @@ img {
 
 /*  Hilang function */
 .sembunyi {
-  visibility: hidden;
+  /* visibility: hidden; */
+  display: none;
 }
 .hilang {
   display: none !important;
 }
 .addColor {
   color: var(--Clear) !important;
-}
-
-/* Animasi */
-:is(.suport, .vbutton) span {
-  display: block;
-  position: absolute;
-  background: var(--color-animation);
-}
-:is(.suport, .vbutton) span:nth-child(1) {
-  left: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-}
-:is(.suport, .vbutton):hover span:nth-child(1) {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
-:is(.suport, .vbutton) span:nth-child(2) {
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-}
-:is(.suport, .vbutton):hover span:nth-child(2) {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
-:is(.suport, .vbutton) span:nth-child(3) {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 1px;
-  transform: scalex(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-:is(.suport, .vbutton):hover span:nth-child(3) {
-  transform: scalex(1);
-  transform-origin: left;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-:is(.suport, .vbutton) span:nth-child(4) {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 50%;
-  height: 1px;
-  transform: scalex(0);
-  transform-origin: left;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
-:is(.suport, .vbutton):hover span:nth-child(4) {
-  transform: scalex(1);
-  transform-origin: right;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
 }

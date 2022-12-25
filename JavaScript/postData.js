@@ -3,7 +3,6 @@ $.getJSON("https://inskrtch-de394-default-rtdb.firebaseio.com/download.json?prin
   $(".jumlah-logo").text(data.postlogo.length + " Logo");
   $(".jumlah-vector").text(data.postvector.length + " Vector");
   $(".jumlah-codeFree").text(data.postcode.length + " CodeFree");
-  $(".jumlah-project").text(data.postproject.length + " AppsProject");
 });
 
 function tampilSemuaData() {
@@ -212,13 +211,6 @@ $(".Shots").on("click", function () {
   pilihanTampil();
   $(this).addClass("addColor");
 });
-$(".Video").on("click", function () {
-  Hilangarah();
-  KontenHilang();
-  pilihanHilang();
-  $("#videos").removeClass("hilang");
-  $(this).addClass("addColor");
-});
 $(".Logo").on("click", function () {
   Hilangarah();
   KontenHilang();
@@ -249,34 +241,39 @@ $(".About").on("click", function () {
 });
 
 // Function #
-if (window.location.href.includes("#about")) {
-  Hilangarah();
-  KontenHilang();
-  pilihanHilang();
-  $("#about").removeClass("hilang");
-  $(".About").addClass("addColor");
-} else {
-  if (window.location.href.includes("#logo")) {
+var url = window.location.href.split("#")[1];
+switch (url) {
+  case "logos":
     Hilangarah();
     KontenHilang();
     pilihanHilang();
     $("#logo").removeClass("hilang");
     $(".Logo").addClass("addColor");
-  } else {
-    if (window.location.href.includes("#vector")) {
-      Hilangarah();
-      KontenHilang();
-      pilihanHilang();
-      $("#vector").removeClass("hilang");
-      $(".Vector").addClass("addColor");
-    } else {
-      if (window.location.href.includes("#code")) {
-        Hilangarah();
-        KontenHilang();
-        pilihanHilang();
-        $("#Website").removeClass("hilang");
-        $(".Website").addClass("addColor");
-      }
-    }
-  }
+    break;
+  case "vectors":
+    Hilangarah();
+    KontenHilang();
+    pilihanHilang();
+    $("#vector").removeClass("hilang");
+    $(".Vector").addClass("addColor");
+    break;
+  case "code":
+    Hilangarah();
+    KontenHilang();
+    pilihanHilang();
+    $("#Website").removeClass("hilang");
+    $(".Website").addClass("addColor");
+    break;
+  case "about":
+    Hilangarah();
+    KontenHilang();
+    pilihanHilang();
+    $("#about").removeClass("hilang");
+    $(".About").addClass("addColor");
+    break;
+  default:
+    Hilangarah();
+    Tampilkan();
+    pilihanTampil();
+    $(".Shots").addClass("addColor");
 }
