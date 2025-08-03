@@ -1,0 +1,44 @@
+[
+  {
+    "app": "Instagram",
+    "url": "https://instagram.com/mulyaha_disapu_tra",
+    "iconClass": "fab fa-instagram",
+    "description": "Explore my daily updates and visual moments"
+  },
+  {
+    "app": "Dribbble",
+    "url": "https://dribbble.com/Appsventory",
+    "iconClass": "fab fa-dribbble",
+    "description": "Design portfolio and visual experiments"
+  },
+  {
+    "app": "Behance",
+    "url": "http://www.behance.net/appsventory",
+    "iconClass": "fab fa-behance",
+    "description": "Curated design projects and creative showcases"
+  },
+  {
+    "app": "GitHub",
+    "url": "https://github.com/mulyasaputra",
+    "iconClass": "fab fa-github",
+    "description": "Source code and open-source contributions"
+  },
+  {
+    "app": "YouTube",
+    "url": "https://youtube.com/@mulyaha_disapu_tra",
+    "iconClass": "fab fa-youtube",
+    "description": "Watch tutorials and creative content"
+  },
+  {
+    "app": "TikTok",
+    "url": "https://www.tiktok.com/@mulyaha_disapu_tra",
+    "iconClass": "fab fa-tiktok",
+    "description": "Creative short videos and behind-the-scenes"
+  },
+  {
+    "app": "Pinterest",
+    "url": "https://www.pinterest.com/mulyaha_disapu_tra",
+    "iconClass": "fab fa-pinterest",
+    "description": "Moodboards, ideas, and visual inspirations"
+  }
+]

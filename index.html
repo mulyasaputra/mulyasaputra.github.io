@@ -100,7 +100,7 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        Hello, I'm <span class="text-indigo-600">Mulya Hd Saputra</span>
+                        Hello, I'm <span class="text-indigo-600"><span class="my-full-name"></span></span>
                     </h1>
                     <p class="text-lg text-gray-600 mb-8">
                         UI/UX Designer & Web Developer with experience in education and
@@ -118,9 +118,8 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div
-                        class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
-                        <img src="asset/images/file_00000000103461f9a9338e803dc43ad6.jpg"
-                            alt="Professional portrait of a UI/UX designer and web developer smiling confidently in business casual attire against a light background"
+                        class="relative profile w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
+                        <img alt="Professional portrait of a UI/UX designer and web developer smiling confidently in business casual attire against a light background"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>
@@ -605,7 +604,7 @@
 
             <div class="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400">
-                    &copy; 2024 ICK Network. All rights reserved.
+                    &copy; <span class="year"></span> ICK Network. All rights reserved.
                 </p>
                 <div class="mt-4 md:mt-0 space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
@@ -616,38 +615,8 @@
         </div>
     </footer>
 
-    <!-- Mobile Menu Script -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggle = document.getElementById("menu-toggle");
-            const mobileMenu = document.getElementById("mobile-menu");
-
-            menuToggle.addEventListener("click", function () {
-                mobileMenu.classList.toggle("hidden");
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute("href");
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: "smooth",
-                        });
-
-                        // Close mobile menu if open
-                        if (!mobileMenu.classList.contains("hidden")) {
-                            mobileMenu.classList.add("hidden");
-                        }
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="JS/main.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 
 </html>
