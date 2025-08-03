@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio - UI/UX Designer & Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    rgba(99, 102, 241, 0.3) 0%,
+                    rgba(99, 102, 241, 0.1) 50%,
+                    transparent 100%);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.2);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #6366f1;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-indigo-600">PORTFOLIO</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-indigo-600">Home</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-indigo-600">Skills</a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-indigo-600">Experience</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-indigo-600">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-600 hover:text-indigo-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-indigo-600">Home</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-indigo-600">Skills</a>
+                <a href="#experience"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-indigo-600">Experience</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-indigo-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        Hello, I'm <span class="text-indigo-600">Mulya Hd Saputra</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        UI/UX Designer & Web Developer with experience in education and
+                        internship in Japan. Passionate about creating beautiful,
+                        functional designs and implementing them with clean code.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact"
+                            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 transform hover:scale-105">Contact
+                            Me</a>
+                        <a href="#skills"
+                            class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition duration-300">My
+                            Skills</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div
+                        class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg">
+                        <img src="asset/images/file_00000000103461f9a9338e803dc43ad6.jpg"
+                            alt="Professional portrait of a UI/UX designer and web developer smiling confidently in business casual attire against a light background"
+                            class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+                My Skills
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                I specialize in both design and development, allowing me to create
+                complete digital experiences from concept to implementation.
+            </p>
+
+            <!-- Design Skills -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold text-indigo-600 mb-6 flex items-center">
+                    <i class="fas fa-pencil-alt mr-3"></i> Design Skills
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-figma text-2xl text-indigo-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Figma</h4>
+                        <p class="text-sm text-gray-600">
+                            UI/UX design, prototyping, design systems
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-bezier-curve text-xl text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Adobe Illustrator</h4>
+                        <p class="text-sm text-gray-600">
+                            Vector graphics, illustration, logo design
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-paint-brush text-xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">CorelDraw</h4>
+                        <p class="text-sm text-gray-600">
+                            Graphic design, layout, print materials
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="far fa-image text-xl text-teal-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Photoshop</h4>
+                        <p class="text-sm text-gray-600">
+                            Photo editing, digital art, mockups
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Skills -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold text-indigo-600 mb-6 flex items-center">
+                    <i class="fas fa-code mr-3"></i> Development Skills
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-html5 text-2xl text-red-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">HTML</h4>
+                        <p class="text-sm text-gray-600">
+                            Semantic markup, accessibility
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-css3-alt text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">CSS</h4>
+                        <p class="text-sm text-gray-600">
+                            Responsive design, animations, frameworks
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-js text-2xl text-yellow-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">JavaScript</h4>
+                        <p class="text-sm text-gray-600">
+                            Frontend interactivity, DOM manipulation
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-php text-2xl text-purple-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">PHP</h4>
+                        <p class="text-sm text-gray-600">
+                            Backend development, server-side scripting
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-server text-2xl text-red-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Laravel</h4>
+                        <p class="text-sm text-gray-600">
+                            MVC framework, web applications
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fa-solid fa-code text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">NineVerse</h4>
+                        <p class="text-sm text-gray-600">
+                            Simple MVC framework, web applications
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Skills -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold text-indigo-600 mb-6 flex items-center">
+                    <i class="fas fa-language mr-3"></i> Language Skills
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe-asia text-2xl text-indigo-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Indonesian</h4>
+                        <p class="text-sm text-gray-600">Native proficiency</p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-flag text-2xl text-red-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Japanese</h4>
+                        <p class="text-sm text-gray-600">
+                            Basic conversation (N5-N4 level)
+                        </p>
+                    </div>
+                    <div
+                        class="skill-card bg-white rounded-lg p-6 shadow-md border border-gray-100 transition duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe-europe text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">English</h4>
+                        <p class="text-sm text-gray-600">Learning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+                Work Experience
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                I teach web development, UI/UX design,
+                and digital entrepreneurship through Babbel Studio, creating engaging learning materials to empower
+                aspiring designers and developers.
+            </p>
+
+            <div class="relative">
+                <!-- Experience Timeline -->
+                <div class="space-y-8 relative">
+                    <!-- Current Experience -->
+                    <div class="timeline-item relative pl-8">
+                        <div
+                            class="absolute left-0 top-1 h-4 w-4 rounded-full bg-indigo-600 border-4 border-indigo-100">
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Founder & Instructor</h3>
+                                <span class="text-indigo-600 font-medium">2024–Present</span>
+                            </div>
+                            <h4 class="text-lg font-medium mb-2">Babbel Studio, Pati</h4>
+                            <p class="text-gray-600">
+                                Founded Babbel Studio, a small-scale tutoring business focused on teaching UI/UX design
+                                (Figma, Adobe Photoshop, Adobe Illustrator) and web programming (HTML, CSS, JavaScript).
+                                Develop engaging learning materials, provide personalized coaching to students, and
+                                support aspiring designers and developers in building practical skills for digital
+                                entrepreneurship.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Previous Experiences -->
+                    <div class="timeline-item relative pl-8">
+                        <div
+                            class="absolute left-0 top-1 h-4 w-4 rounded-full bg-indigo-600 border-4 border-indigo-100">
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Web & Digital Skills Teacher</h3>
+                                <span class="text-indigo-600 font-medium">2021 - 2024</span>
+                            </div>
+                            <h4 class="text-lg font-medium mb-2">SMA Bopkri 1 Pati</h4>
+                            <p class="text-gray-600">Taught web programming (HTML, CSS, JavaScript), created engaging
+                                learning materials, trained high school students in digital entrepreneurship skills
+                                (such as web development and online business strategies), and guided them in developing
+                                their business ideas, focusing on technical skills and creativity.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pl-8">
+                        <div
+                            class="absolute left-0 top-1 h-4 w-4 rounded-full bg-indigo-600 border-4 border-indigo-100">
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-gray-800">
+                                    Graphic Design Instructor
+                                </h3>
+                                <span class="text-indigo-600 font-medium">2021 - 2023</span>
+                            </div>
+                            <h4 class="text-lg font-medium mb-2">
+                                LPKS Briliyan Regency, Pati
+                            </h4>
+                            <p class="text-gray-600">
+                                I worked as a graphic design instructor, teaching CorelDRAW, Adobe Illustrator, and
+                                Adobe Photoshop. My responsibilities included creating engaging and comprehensive lesson
+                                plans, guiding students through practical design projects, and providing feedback and
+                                support to enhance their technical skills and creativity in graphic design.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+                Featured Projects
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                A selection of my design and development work. More projects available
+                on request.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div
+                    class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 transform hover:scale-[1.02]">
+                    <div class="project-image h-48 overflow-hidden">
+                        <img src="asset/thumbnails/toper.png"
+                            alt="Modern web application dashboard with clean UI design showing analytics charts and data visualizations created with Figma"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded">UI/UX
+                                Design</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Toper</h3>
+                        <p class="text-gray-600 mb-4">
+                            Created a modern Landing page using Figma with responsive
+                            components and dark mode.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Figma</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Design System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div
+                    class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 transform hover:scale-[1.02]">
+                    <div class="project-image h-48 overflow-hidden">
+                        <img src="https://raw.githubusercontent.com/mulyasaputra/InFima-v2/main/public/assets/ui.png"
+                            alt="InFima helps manage personal finances, track spending, and achieve your financial goals."
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Web
+                                Development</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">InFima</h3>
+                        <p class="text-gray-600 mb-4">
+                            InFima helps manage personal finances, track spending, and achieve your financial goals.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">NineVerse Lite</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">PHP</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div
+                    class="project-card bg-white rounded-lg overflow-hidden shadow-lg border border-gray-100 transition duration-300 transform hover:scale-[1.02]">
+                    <div class="project-image h-48 overflow-hidden">
+                        <img src="https://placehold.co/600x400"
+                            alt="Corporate branding package including logo design, business cards, and letterhead created with Illustrator and Photoshop"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Graphic
+                                Design</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Brand Identity Package</h3>
+                        <p class="text-gray-600 mb-4">
+                            Designed a complete brand identity including logo, business
+                            cards, and marketing materials.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Illustrator</span>
+                            <span class="text-xs bg-gray-100 px-2 py-1 rounded">Photoshop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-50 to-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+                Get In Touch
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Interested in working together or have questions? Feel free to reach
+                out!
+            </p>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+                            Contact Information
+                        </h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center">
+                                    <i class="fas fa-envelope text-indigo-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-semibold text-gray-500">EMAIL</h4>
+                                    <a href="mailto:mulyasaputra495@gmail.com"
+                                        class="text-md font-medium text-gray-700 hover:text-indigo-600 transition">mulyasaputra495@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-semibold text-gray-500">
+                                        LOCATION
+                                    </h4>
+                                    <p class="text-md font-medium text-gray-700">
+                                        Gifu, Japan / Pati, Indonesia
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                                    <i class="fab fa-instagram text-blue-600"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-sm font-semibold text-gray-500">
+                                        INSTAGRAM
+                                    </h4>
+                                    <a href="https://www.instagram.com/mulyaha_disapu_tra/"
+                                        class="text-md font-medium text-gray-700 hover:text-indigo-600 transition">Instagram.com/mulyaha_disapu_tra</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2">
+                    <form class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">
+                            Send Me a Message
+                        </h3>
+
+                        <div class="space-y-5">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-400 transition" />
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email
+                                    Address</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-400 transition" />
+                            </div>
+
+                            <div>
+                                <label for="subject"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-400 transition" />
+                            </div>
+
+                            <div>
+                                <label for="message"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:border-indigo-400 transition"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-xl font-bold text-white">PORTFOLIO</a>
+                    <p class="mt-4 text-gray-400 max-w-md">
+                        UI/UX Designer & Web Developer creating beautiful digital
+                        experiences with skills in design and development.
+                    </p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/mulyaha_disapu_tra/"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://github.com/mulyasaputra"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://dribbble.com/Appsventory"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-dribbble text-xl"></i>
+                    </a>
+                    <a href="http://www.behance.net/appsventory"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-behance text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">
+                    &copy; 2024 ICK Network. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.getElementById("menu-toggle");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            menuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute("href");
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: "smooth",
+                        });
+
+                        // Close mobile menu if open
+                        if (!mobileMenu.classList.contains("hidden")) {
+                            mobileMenu.classList.add("hidden");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
