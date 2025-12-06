@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library - Appsventory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #filters .active {
+            background-color: oklch(51.1% 0.262 276.966);
+        }
+    </style>
+</head>
+
+<body class="bg-[#1e1e2f] text-gray-100 font-sans">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+        <h1 class="text-3xl font-bold text-center mb-6">Appsventory × NineCode</h1>
+
+        <!-- View toggle -->
+        <div class="flex justify-center mb-6">
+            <label class="flex items-center gap-3 cursor-pointer">
+                <span class="text-sm">List</span>
+                <input id="viewToggle" type="checkbox" class="toggle-input hidden" />
+                <div class="w-12 h-6 bg-gray-700 rounded-full relative transition">
+                    <div id="toggleKnob" class="absolute top-1 right-1 w-4 h-4 bg-white rounded-full transition"></div>
+                </div>
+                <span class="text-sm">Grid</span>
+            </label>
+        </div>
+
+        <!-- Filters -->
+        <div id="filters" class="flex flex-wrap justify-center gap-3 mb-8"></div>
+
+        <!-- Wrapper -->
+        <div id="productWrapper" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 transition-all"></div>
+
+        <div id="pagination" class="pagination mt-5"></div>
+
+        <footer>
+            <p class="text-xs mt-5 text-gray-400">
+                &copy; <span class="year"></span> ICK Network. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Dialog Info -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-5 hidden">
+        <div
+            class="bg-[#2f2f4c] relative max-w-xl w-full transform transition-all rounded-xl shadow-lg overflow-hidden">
+            <!-- Modal Header -->
+            <button id="closeModal" class="absolute p-1 border-2 border-blue-500
+                rounded-full top-3 left-3 text-blue-500
+                hover:border-blue-700 hover:text-blue-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+
+            <!-- Modal Body -->
+            <div>
+                <img id="modalImage"
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&amp;h=900&amp"
+                    alt="Thumbnail" class="w-full h-80 object-cover">
+                <div class="p-7 inset-x-0 bottom-">
+                    <h3 id="modalTitle" class="text-3xl font-semibold text-gray-100"></h3>
+                    <p class="text-gray-300 text-xl font-semibold mb-3">
+                        <span id="price">78.23</span>
+                        <span class="text-xs">IDR</span>
+                    </p>
+                    <p id="modalDescription" class="text-gray-200 mb-6"></p>
+                    <button id="ctaButton"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".year").textContent = new Date().getFullYear();
+        // TOGGLE GRID/LIST
+        const toggle = document.getElementById('viewToggle');
+        const knob = document.getElementById('toggleKnob');
+        const wrapper = document.getElementById('productWrapper');
+
+        toggle.addEventListener('change', () => {
+            if (toggle.checked) {
+                wrapper.className = "flex flex-col gap-5";
+                knob.style.left = '0.25rem';
+            } else {
+                wrapper.className = "grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3";
+                knob.style.left = 'calc(100% - 1.25rem)';
+            }
+        });
+
+    </script>
+    <script>
+        const productsPerPage = 9;
+        let currentPage = 1;
+        let products = [];
+        let filteredProducts = [];
+        let activeFilter = "all";
+
+        function toSlug(str) {
+            return str.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
+        }
+
+        function truncateSmart(text, maxLength) {
+            if (text.length <= maxLength) return text;
+            const truncated = text.slice(0, maxLength);
+            return truncated.slice(0, truncated.lastIndexOf(" ")) + "...";
+        }
+        // -----------------------------
+        // RENDER CATEGORY BUTTONS
+        // -----------------------------
+        function renderCategory() {
+            const filters = document.getElementById("filters");
+            filters.innerHTML = "";
+
+            const categories = ["All", ...new Set(products.map(p => p.category))];
+
+            categories.forEach((cat, index) => {
+                const btn = document.createElement("button");
+                btn.dataset.filter = toSlug(cat);
+                btn.className = `filter-btn px-3 py-1 bg-gray-800 rounded-full hover:bg-gray-700 ${index === 0 ? "active" : ""}`;
+                btn.textContent = cat;
+                filters.appendChild(btn);
+            });
+
+            bindFilterEvents();
+        }
+
+        // -----------------------------
+        // FILTER DATA + RESET PAGE + RENDER
+        // -----------------------------
+        function applyFilter(filter) {
+            activeFilter = filter;
+            currentPage = 1;
+
+            if (filter === "all") {
+                filteredProducts = products;
+            } else {
+                filteredProducts = products.filter(
+                    p => toSlug(p.category) === filter
+                );
+            }
+
+            renderProducts();
+            renderPagination();
+        }
+
+
+        // -----------------------------
+        // BUTTON CLICK EVENTS MODAL
+        // -----------------------------
+        function bindModalEvents() {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalPrice = document.getElementById('price');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalImage = document.getElementById('modalImage');
+            const ctaButton = document.getElementById('ctaButton');
+            const closeModalBtn = document.getElementById('closeModal');
+            const itemContainer = document.getElementById("productWrapper");
+            itemContainer.addEventListener('click', function (e) {
+                if (e.target.classList.contains('download-link') || e.target.closest('.download-link')) {
+                    return;
+                }
+                const clickedItem = e.target.closest('.klik');
+
+                if (clickedItem) {
+                    const id = clickedItem.getAttribute('data-id');
+                    const data = filteredProducts.find(product => toSlug(product.title) === id);
+                    console.log(data);
+                    if (data) {
+                        modalTitle.textContent = data.title;
+                        modalDescription.textContent = data.description;
+                        modalImage.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop";
+                        modalPrice.textContent = data.availability === 2 ? null : data.price.toLocaleString('id-ID');
+                        ctaButton.textContent = data.availability === 0 ? "Sold Out" : data.availability === 2 ? "Coming Soon" : data.cta.label;
+                        ctaButton.className = `
+                        ${data.availability === 1 ? "border-2 border-blue-500 hover:bg-blue-700 hover:border-blue-700 text-blue-500" : "bg-gray-600 text-gray-300 cursor-not-allowed pointer-events-none"}
+                        hover:text-white font-semibold py-2 px-7 rounded-full transition`;
+                        ctaButton.onclick = () => {
+                            window.open(data.cta.url, '_blank');
+                        };
+
+                        modal.classList.remove('hidden');
+                    }
+                }
+            });
+            closeModalBtn.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                }
+            });
+        }
+
+        // -----------------------------
+        // BIND FILTER BUTTON EVENTS
+        // -----------------------------
+        function bindFilterEvents() {
+            document.querySelectorAll(".filter-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    applyFilter(btn.dataset.filter);
+                });
+            });
+        }
+
+        // -----------------------------
+        // RENDER PRODUCTS
+        // -----------------------------
+        function renderProducts() {
+            const container = document.getElementById("productWrapper");
+            container.innerHTML = "";
+
+            const start = (currentPage - 1) * productsPerPage;
+            const end = start + productsPerPage;
+
+            const pageItems = filteredProducts.slice(start, end);
+
+            pageItems.forEach(product => {
+                const div = document.createElement("div");
+                div.setAttribute('data-id', toSlug(product.title));
+                div.className = `klik cursor-pointer
+                    relative overflow-hidden
+                    product-item ${toSlug(product.category)} bg-[#2f2f4c] 
+                    border border-[#3f3f5b] p-5 rounded-2xl shadow`;
+
+                div.innerHTML = `
+                    <span class="text-sm px-2 py-1 ${product.style} rounded">${product.category}</span>
+                    <h2 class="text-xl font-semibold mt-3">${product.title}</h2>
+                    <p class="text-gray-400 text-sm mt-2">${truncateSmart(product.description, 80)}</p>
+
+                    <a href="${product.cta.url}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block text-center mt-5 py-2 rounded-xl
+                    ${product.availability === 1 ? "bg-indigo-600 hover:bg-indigo-700" : "bg-gray-600 opacity-50 cursor-not-allowed pointer-events-none"}">
+                    ${product.availability === 0 ? "Sold Out" : product.availability === 2 ? "Coming Soon" : product.cta.label}
+                    </a>
+                    <span class="
+                        absolute right-0 top-0 text-white 
+                        py-1 px-4 text-xs origin-top-right z-10 rounded-bl-2xl
+                        ${product.availability === 0 ? "bg-red-800" : product.availability === 2 ? "bg-orange-500" : "bg-blue-500 hidden"}
+                    ">
+                    ${product.availability === 0 ? "Sold Out" : product.availability === 2 ? "Coming Soon" : "Aru"}
+                    </span>
+                `;
+
+                container.appendChild(div);
+            });
+        }
+
+        // -----------------------------
+        // PAGINATION
+        // -----------------------------
+        function renderPagination() {
+            const pagination = document.getElementById("pagination");
+            pagination.innerHTML = "";
+
+            const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+
+            // Prev
+            const prev = document.createElement("button");
+            prev.textContent = "Prev";
+            prev.disabled = currentPage === 1;
+            prev.className = `
+                mr-1 px-3 py-1 rounded-lg text-sm text-gray-300 transition
+                ${currentPage === 1 ? "bg-gray-600 hover:bg-gray-700" : "bg-indigo-600 hover:bg-indigo-700"}
+                disabled:opacity-30 disabled:cursor-not-allowed
+            `;
+            prev.onclick = () => {
+                currentPage--;
+                renderProducts();
+                renderPagination();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+            pagination.appendChild(prev);
+
+            // Number buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement("button");
+                btn.textContent = i;
+                btn.className = i === currentPage ? "active" : "";
+                btn.className = `
+                    mx-1 px-3 py-1 rounded-lg text-sm border border-gray-700
+                    ${i === currentPage
+                        ? "bg-indigo-600 text-white border-indigo-500"
+                        : "bg-[#2f2f4c] text-gray-300 hover:bg-[#3f3f5b]"}
+                    transition
+                `;
+                btn.onclick = () => {
+                    currentPage = i;
+                    renderProducts();
+                    renderPagination();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                };
+                pagination.appendChild(btn);
+            }
+
+            // Next
+            const next = document.createElement("button");
+            next.textContent = "Next";
+            next.disabled = currentPage === totalPages;
+            next.className = `
+                ml-1 px-3 py-1 rounded-lg text-sm text-gray-300 transition
+                ${currentPage === totalPages ? "bg-gray-600 hover:bg-gray-700" : "bg-indigo-600 hover:bg-indigo-700"}
+                disabled:opacity-30 disabled:cursor-not-allowed
+            `;
+            next.onclick = () => {
+                currentPage++;
+                renderProducts();
+                renderPagination();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            };
+            pagination.appendChild(next);
+        }
+
+        // -----------------------------
+        // INIT FETCH
+        // -----------------------------
+        fetch("asset/JSON/library.json")
+            .then(res => res.json())
+            .then(data => {
+                products = data.reverse();
+                filteredProducts = products;
+                renderCategory();
+                renderProducts();
+                renderPagination();
+                bindModalEvents();
+            })
+            .catch(err => console.error("Error loading products:", err));
+    </script>
+
+</body>
+
+</html>

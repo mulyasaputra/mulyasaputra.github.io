@@ -1,0 +1,110 @@
+[
+  {
+    "category": "Source Code",
+    "title": "Fossil InFima App",
+    "description": "Finance managing platform ",
+    "cta": { "label": "View details", "url": "https://github.com/mulyasaputra/InSketch_Management" },
+    "style": "bg-blue-600",
+    "price": 0,
+    "availability": 1
+  },
+  {
+    "category": "Source Code",
+    "title": "Legacy Code InFima 2",
+    "description": "Practical, modern app for personal finance management.",
+    "cta": { "label": "Download Now", "url": "https://github.com/mulyasaputra/InFima-v2" },
+    "style": "bg-blue-600",
+    "price": 0,
+    "availability": 1
+  },
+  {
+    "category": "Shoftware",
+    "title": "InFima 3 Lite",
+    "description": "Practical, modern app for personal finance management.",
+    "cta": { "label": "Download Now", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-green-600",
+    "price": 0,
+    "availability": 2
+  },
+    {
+    "category": "Shoftware",
+    "title": "InFima 3 Pro",
+    "description": "Practical, modern app for Business finance management.",
+    "cta": { "label": "Download", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-green-600",
+    "price": 0,
+    "availability": 2
+  },
+  {
+    "category": "Landing Page",
+    "title": "SchoolPro",
+    "description": "Platform premium untuk mengoptimalkan pembelajaran, komunikasi, dan manajemen sekolah secara digital.",
+    "cta": { "label": "Buy Now", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-red-500",
+    "price": 5000,
+    "availability": 2
+  },
+  {
+    "category": "Landing Page",
+    "title": "Web Portofolio",
+    "description": "Template landing page portofolio pribadi yang dirancang untuk menampilkan karya, keterampilan, dan pengalaman profesional Anda secara menarik.",
+    "cta": { "label": "Buy Now", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-red-500",
+    "price": 5000,
+    "availability": 1
+  },
+  {
+    "category": "Offline Classes",
+    "title": "Desain Grafis untuk Pemula",
+    "description": "Kelas offline yang mengajarkan dasar-dasar desain grafis menggunakan perangkat lunak populer seperti Adobe Photoshop dan CorelDraw.",
+    "cta": { "label": "Contact Us", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-orange-600",
+    "price": 0,
+    "availability": 2
+  },
+  {
+    "category": "Online Classes",
+    "title": "Flutter untuk Pemula",
+    "description": "Kelas online yang mengajarkan dasar-dasar pengembangan aplikasi mobile menggunakan framework Flutter.",
+    "cta": { "label": "Contact Us", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-purple-700",
+    "price": 0,
+    "availability": 2
+  },
+  {
+    "category": "Online Classes",
+    "title": "JavaScript dan CSS untuk Pemula",
+    "description": "Kelas online yang mengajarkan dasar-dasar pemrograman web menggunakan JavaScript dan CSS.",
+    "cta": { "label": "Contact Us", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-purple-700",
+    "price": 0,
+    "availability": 2
+  },
+  {
+    "category": "Offline Classes",
+    "title": "Pemrograman Web Dasar",
+    "description": "Kelas offline yang memperkenalkan konsep dasar pemrograman web, termasuk HTML, CSS, dan JavaScript.",
+    "cta": { "label": "Contact Us", "url": "https://github.com/mulyasaputra/Ngopi_Yok" },
+    "style": "bg-orange-600",
+    "price": 0,
+    "availability": 2
+  },
+  {
+    "category": "Source Code",
+    "title": "Web Kedai Kopi",
+    "description": "Template landing page untuk kedai kopi yang dirancang untuk menarik pelanggan dengan menampilkan menu, lokasi, dan suasana kedai secara menarik.",
+    "cta": { "label": "Download Now", "url": "https://appsventory.com/kelas/web-design" },
+    "style": "bg-blue-600",
+    "price": 0,
+    "availability": 1
+  },
+  {
+    "category": "Source Code",
+    "title": "Parcel Tracking Hub",
+    "description": "Template landing page untuk layanan pelacakan paket yang dirancang untuk memberikan informasi real-time tentang status pengiriman kepada pelanggan.",
+    "cta": { "label": "Download Now", "url": "https://github.com/mulyasaputra/cek-resi" },
+    "style": "bg-blue-600",
+    "price": 0,
+    "availability": 1
+  }
+]
