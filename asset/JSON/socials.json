@@ -40,5 +40,11 @@
     "url": "https://www.pinterest.com/mulyaha_disapu_tra",
     "iconClass": "fab fa-pinterest",
     "description": "Moodboards, ideas, and visual inspirations"
+  },
+  {
+    "app": "Envelope",
+    "url": "mailto:mulyasaputra495@gmail.com",
+    "iconClass": "fas fa-envelope",
+    "description": "Send me an email directly"
   }
 ]
